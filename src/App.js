@@ -1,16 +1,18 @@
-
+import logo from './logo.svg';
 import './App.css';
-import Home from './Pages/Home'
-import Header from "./Header/Header"
-import Footer from "./Footer/Footer"
-
+import HotelCityList from './component/HotelCityList';
+import Home from "./Pages/Home.jsx";
+import Header from "./Header/Header.jsx"
+import Footer from "./Components/Footer/Footer.jsx"
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <HotelCityList /> 
+      {/* <Header/>
       <Home/>
       <Footer/>
+      <Footer /> */}
     </div>
   );
 }
