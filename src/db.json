@@ -398,7 +398,31 @@
                "Washing machine" : "fasle"
            },
            "Tax" : 123
-    }
-   
+    },
+    {
+        "id" : 216,
+        "state" : "Himachal Pradesh",
+        "City" : "Dharamshala",
+        "Hotel name" : "Indigo Drift Mountain Stay, Naddi, HP",
+        "Room Avialable" : 5,
+        "Price" : 1283,
+        "Image1" : "https://a0.muscache.com/im/pictures/miso/Hosting-53884859/original/12ee9aa8-ef43-4775-ab16-45d8229e305a.jpeg?im_w=1200",
+        "Image2" : "https://a0.muscache.com/im/pictures/miso/Hosting-53884859/original/860a729b-579f-48ad-805f-1fe2aaaf814c.jpeg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/miso/Hosting-53884859/original/fb503018-9325-4a05-b0db-29fca7ddcd16.jpeg?im_w=720",
+        "Review" : 3,
+         "Rating" : 5 ,
+          "Tagline" : "Private room in nature lodge hosted by Kshitij",
+          "About" : "Situated amidst the mountain town of Naddi, our comfortable stay will bring you closer to true natural bliss. Amazing views from the balcony and warm cozy rooms is what the stay is all about.",
+           "Facility" : {
+               "Wifi" : "True",
+               "Free cancellation" : "false",
+               "Pool" : "false",
+               "Air condition" : "false",
+               "Kitchen" : "true",
+               "Free parkink" : "true",
+               "Washing machine" : "true"
+           },
+           "Tax" : 123
+    }  
    
 ]
