@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
+import CityWiseMap from "./CityWiseMap";
 import ListOfCityHotel from "./ListOfCityHotel";
+import "./cityWise.css";
+import Header from "../Header/Header";
+import Footer from "../Components/Footer/Footer";
 
 const HotelCityList = () => {
     const dispatch = useDispatch();
@@ -7,9 +11,21 @@ const HotelCityList = () => {
     console.log(cityname);
     return(
         <>
+        <Header />
+      <div className="fillter_box_btn">
+            <button className="fillter_btn">Price</button>
+            <button className="fillter_btn">Free cancellation</button>
+            <button className="fillter_btn">Wifi</button>
+            <button className="fillter_btn">Kitchen</button>
+            <button className="fillter_btn" >Air conditioning</button>
+            <button className="fillter_btn">Washing machine</button>
+            <button className="fillter_btn">Pool</button>
+            <button className="fillter_btn">Kitchen</button>
+            <button className="fillter_btn">Free parking</button>
+        </div>
+        <div className="city_box">
+      <div>
         <div>
-      <div>
-      <div>
            <p>123 stays in {cityname}</p>
             <div style={{display:"flex"}}>
             <img width={"30px"} height={"30px"} src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/explore-core/images/icon-uc-trophy.9ee78aa12d1a51a64b1dc566a4391ba5.gif" />
@@ -17,12 +33,13 @@ const HotelCityList = () => {
             </div>
        </div>
     <ListOfCityHotel  />
+    <p>Enter dates to see full pricing. Additional fees apply. Taxes may be added</p>
       </div>
       <div>
-          
+        <CityWiseMap  />  
       </div>
         </div>
-        
+         <Footer />
         </>
     )
 }

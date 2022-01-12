@@ -1,0 +1,53 @@
+.city_box{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+.Hotel_detalis{
+    display: flex;
+    width: 700px;
+}
+.second_box_detalis{
+    margin-left: 12px;
+}
+.image{
+  width: 250px;
+ height: 200px; 
+ border-radius: 14px;
+}
+.heart_image{
+    width: 36px;
+    height: 30px;
+    margin-left: 20px;
+}
+.price_city_wise{
+    margin-top: 140px;
+}
+.city_map_image{
+    margin-top: 30px;
+    position: fixed;
+}
+.city_map_image div iframe{
+    width: 600px;
+    height: 560px;
+    margin-left: 20px;
+}
+.fillter_box_btn{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+}
+.fillter_btn{
+    border-radius: 20px;
+    border: 1px solid gray;
+    margin: 13px 22px;
+    font-size: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: white;
+}
+.fillter_btn :hover{
+    border: 1px solid black;
+}
