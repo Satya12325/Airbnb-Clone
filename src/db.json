@@ -14,13 +14,13 @@
           "Tagline" : "Private room in Anjuna",
           "About" : "Xaviers Guest House is 200 meters away from the beach, locate in Anjuna near the Famous Flea Market . ",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "False",
-               "Pool" : "False",
-               "Air condition" : "True",
-               "Kitchen" : "False",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+               "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
            },
            "Tax" : 132 
     },
@@ -39,13 +39,13 @@
           "Tagline" : "Private room in villa hosted by Erlick",
           "About" : "Casa Abilio de Souza is a 150 year old house, owned by the Ferreira family. We have 1 small size AC room with a view of ancestral Goa. Accommodates up to 2 adults comfortably. We also have an in house housekeeper. In 2010, Erlick Ferreira, the grandson of Abilio de Sousa began restoring the property. After 5 long years, the house is now restored to its former glory with wooden flooring and high wooden ceilings, while carefully maintaining its aesthetics. ",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "False",
-               "Pool" : "False",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+               "Wifi" : true,
+               "Free cancellation" :false,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
            },
            "Tax" : 182 
     },
@@ -64,13 +64,13 @@
           "Tagline" : "Private room in chalet hosted by Marilyn",
           "About" : "An ideal getaway after being cooped up due to the Covid-19 situation and Compliant with safety procedures, these are lovely cottages with all amenities + great Wifi just opposite to the river and just 2 mins off from the Morjim Beach that allows for refreshing walks.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "True",
-               "Pool" : "True",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+               "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : true,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
            },
            "Tax" : 332 
     },
@@ -89,13 +89,13 @@
           "Tagline" : "Private room in cottage hosted by Ingo",
           "About" : "Welcome to Goa Cottages in Agonda Beach, which has replaced White Sand Beach Resort on arguably Agonda's most beautiful beachfront property, offering luxurious cottages with stunning sea- & garden views.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "True",
-               "Pool" : "True",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "True"
+               "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : true,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : true
            },
            "Tax" : 782 
     },
@@ -114,13 +114,13 @@
           "Tagline" : "Entire rental unit hosted by Surbhi",
           "About" : "Who doesn't like to Stay near the Beach and walking distance from Chapora River. Enjoy common Infinity pool at Terrace with Sceanic view of Chapora River & Chapora Fort.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "False",
-               "Pool" : "True",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+               "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : true,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
            },
            "Tax" : 332 
     },
@@ -139,13 +139,13 @@
           "Tagline" : "Hut hosted by Vinayak",
           "About" : "Cozy and casual beach front Huts, for the easy going way of life near the coast. Nested in North goa, Arambol the rooms are simple and sober with all the huts having sea view. The space is located on the cliff side of the famous Arambol walkway market. Ideally suitable for the people who want to enjoy the beach side of goa, away from the people and looking for a rejuvenating holiday.",
            "Facility" : {
-               "Wifi" : "false",
-               "Free cancellation" : "True",
-               "Pool" : "false",
-               "Air condition" : "false",
-               "Kitchen" : "false",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+            "Wifi" : true,
+            "Free cancellation" : false,
+            "Pool" : true,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 0 
     },
@@ -164,13 +164,13 @@
           "Tagline" : "Entire rental unit hosted by Amit",
           "About" : "Beautifully decorated apartment for relaxation / celebration . Unwind yourself with an amazing runway view from the balcony , comfortable beds and a loaded living room with wifi dth and alexa . Kitchen is designed to light cook and has a microwave minbar fridge and a full fledged fridge with bar accessories and a wall mounted bar equipped, just in case . We would love to host you and create an experience for you. Couples are welcome - so is everyone .",
            "Facility" : {
-               "Wifi" : "false",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "false",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+               "Wifi" : false,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
            },
            "Tax" : 0 
     },
@@ -189,13 +189,13 @@
           "Tagline" : "Room in aparthotel hosted by Winston",
           "About" : "Located near MG Road makes transport and travel so easily available.  💫Private Rooms with Seperate Kitchen 💫Silent AC Rooms under budget 💫High speed Internet available for working travellers 💫Altenate day house keeping for long stays",
            "Facility" : { 
-               "Wifi" : "True",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "True"
+            "Wifi" : false,
+            "Free cancellation" : true,
+            "Pool" : false,
+            "Air condition" : false,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 200
     },
@@ -214,13 +214,13 @@
           "Tagline" : "Entire rental unit hosted by Nikhil",
           "About" : "Located located at Whitefield, opposite the Prestige Shantiniketan and next to Manipal Hospital It is an Eco-friendly, green building that is energy efficient by using all natural stones and clay blocks.  Our rooms features contemporary furnishings with elegant designs equipped with a microwave, electronic safe, wardrobe and a work desk, 24hrs Hot water, Wi-fi, 32 inch LED TV, tea/coffee maker",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "True",
-               "Pool" : "false",
-               "Air condition" : "false",
-               "Kitchen" : "false",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+            "Wifi" : false,
+            "Free cancellation" : true,
+            "Pool" : false,
+            "Air condition" : false,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 120 
     },
@@ -239,13 +239,13 @@
           "Tagline" : "Entire apartment hosted by Guru",
           "About" : "Hotel Avora Tree is managed by Rivido Hotels & Resorts - a modern hotel management brand setting trends in the Bangalore hospitality industry. It features an in-house multicuisine restaurant near Bangalore International Airport - The Kitchen Cafe, which brings a range of succulent and savoury dishes from across the world onto your plate.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "false",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+            "Wifi" : false,
+            "Free cancellation" : false,
+            "Pool" : true,
+            "Air condition" : false,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 110
     },
@@ -264,13 +264,13 @@
           "Tagline" : "Entire serviced apartment hosted by Kashif",
           "About" : "These are Basically Serviced Apartments very Spacious and Huge Apartments 2300sft to be Exact we have a Lift a lot of Car Parking Space we have a Security person at the Building and a Power backup so your always comfortable all Bed rooms have an Air-conditioner and a Fully Equipped kitchen",
            "Facility" : {
-               "Wifi" : "false",
-               "Free cancellation" : "True",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "false",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+            "Wifi" : true,
+            "Free cancellation" : true,
+            "Pool" : true,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 231 
     },
@@ -289,13 +289,13 @@
           "Tagline" : "Entire apartment hosted by Shivani",
           "About" : "Cloud&Cozy is a peaceful and centrally located 3-bedroom apartment located near IT hub, Gachibowli.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+               "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : false,
+               "Washing machine" : false
            },
            "Tax" : 145
     },
@@ -314,13 +314,13 @@
           "Tagline" : "Entire rental unit hosted by Sajjad",
           "About" : "Hip one bedroom apartment in the heart of the city and in one of the most poshest area of Hyderabad, Banjara Hills Road no 3. It has been recently completely renovated and everything in the apartment is brand new! Ideal for a couple or two people and has everything from an AC bedroom, fully functional kitchen to a washroom, AC lounge and a small dining area. It is a nice and cozy place for someone looking at creating long term memories.",
            "Facility" : {
-               "Wifi" : "false",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "false",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+            "Wifi" : true,
+            "Free cancellation" : false,
+            "Pool" : false,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : false,
+            "Washing machine" : false
            },
            "Tax" : 124
     },
@@ -339,13 +339,13 @@
           "Tagline" : "Entire serviced apartment hosted by Raghu",
           "About" : "Full furnished serviced apartment located in TNGO Colony, Financial District, near Gachibowli, Hyderabad. This apartment can accommodate 5 adults. Located in calm and peaceful residential area.",
            "Facility" : {
-               "Wifi" : "false",
-               "Free cancellation" : "True",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "false",
-               "Free parkink" : "True",
-               "Washing machine" : "fasle"
+            "Wifi" : true,
+            "Free cancellation" : false,
+            "Pool" : false,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : true
            },
            "Tax" : 0 
     },
@@ -364,13 +364,13 @@
           "Tagline" : "Entire rental unit hosted by Sajjad",
           "About" : "Newly remodeled luxurious 3 bedroom penthouse in the heart of the city and in the poshest area, Banjara Hills - Rd no. 11. Walking distance from Minerva Grand Hotel. It is fully furnished and has a lot of air, light and privacy. 45 mins from the airport.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "True",
-               "Pool" : "false",
-               "Air condition" : "True",
-               "Kitchen" : "True",
-               "Free parkink" : "True",
-               "Washing machine" : "True"
+            "Wifi" : true,
+            "Free cancellation" :true,
+            "Pool" : true,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : false,
+            "Washing machine" : true
            },
            "Tax" : 456
     },
@@ -389,13 +389,13 @@
           "Tagline" : "Entire rental unit hosted by Zak",
           "About" : "down town area close to shopping and groceries. trendy and modern design. any support services easy to access. designed for a relaxing and chilling environment.",
            "Facility" : {
-               "Wifi" : "True",
-               "Free cancellation" : "false",
-               "Pool" : "false",
-               "Air condition" : "false",
-               "Kitchen" : "false",
-               "Free parkink" : "false",
-               "Washing machine" : "fasle"
+            "Wifi" : true,
+            "Free cancellation" : true,
+            "Pool" : true,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
            },
            "Tax" : 123
     }

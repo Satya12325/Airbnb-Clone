@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles';
 export default function Footer(){
 
     return(
-        <div style={{width:"100%",border:"1px solid red"}}>
+        <div style={{width:"100%",border:"1px solid black",position:"relative"}}>
         <div>
         <Stack
         direction={{ xs: 'column', sm: 'row'}}

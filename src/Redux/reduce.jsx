@@ -2,6 +2,9 @@ import { appComponet } from "./actionType"
 
 const initState = {
     cityname : "Bangalore",
+    freecancelation: false,
+    Wifi : false,
+    kitchen : false
 }
 
 export const reduce = (state  = initState , {payload , type}  ) => {
@@ -10,6 +13,24 @@ export const reduce = (state  = initState , {payload , type}  ) => {
             return {
                 ...state,
                 cityname : payload
+            }
+        }
+        case appComponet.FILTER_WIFI : {
+            return {
+                ...state,
+                Wifi : true,
+            }
+        }
+        case appComponet.FILTER_FREE_CANCELLATION : {
+            return{
+                ...state,
+                freecancelation : payload ? false : true
+            }
+        }
+        case appComponet.FILTER_KITCHEN : {
+            return{
+                ...state,
+                kitchen : true
             }
         }
         default :  

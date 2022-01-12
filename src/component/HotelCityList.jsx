@@ -4,17 +4,24 @@ import ListOfCityHotel from "./ListOfCityHotel";
 import "./cityWise.css";
 import Header from "../Header/Header";
 import Footer from "../Components/Footer/Footer";
+import { filterfreecancelation } from "../Redux/action";
 
 const HotelCityList = () => {
     const dispatch = useDispatch();
     const cityname = useSelector((state) => state.cityname);
-    console.log(cityname);
+    const freecancelations = useSelector((state) => state.freecancelation);
+     
+    const freecancelation = () => {
+      
+         dispatch(filterfreecancelation(freecancelations))
+     }
+
     return(
         <>
         <Header />
       <div className="fillter_box_btn">
             <button className="fillter_btn">Price</button>
-            <button className="fillter_btn">Free cancellation</button>
+            <button className="fillter_btn" onClick={() => freecancelation()}>Free cancellation</button>
             <button className="fillter_btn">Wifi</button>
             <button className="fillter_btn">Kitchen</button>
             <button className="fillter_btn" >Air conditioning</button>

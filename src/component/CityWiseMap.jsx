@@ -7,7 +7,7 @@ const CityWiseMap = () => {
     <div >
         <iframe 
         src={`https://maps.google.com/maps?ll=28.5449756,77.1904397&q=${cityname}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-         frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+         frameborder="0" scrolling="no" marginheight="0" >
              </iframe>
              </div>
             </div>

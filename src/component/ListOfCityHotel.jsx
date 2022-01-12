@@ -5,12 +5,17 @@ import "./cityWise.css";
 
 const ListOfCityHotel = () => {
     const cityname = useSelector((state) => state.cityname);
+    const freecancelations = useSelector((state) => state.freecancelation);
+    console.log(freecancelations)
     return (
         <>
         
         {data.filter((item) => 
          item.City == cityname
          )
+        .filter((item) => 
+         item.Facility["Free cancellation"] == freecancelations
+         ) 
          .map((item) => (
              <div key={item.id} >
                 <hr />
