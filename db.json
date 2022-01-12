@@ -1,5 +1,6 @@
-[
-    {
+
+ { "Available" :[ 
+      {
         "id" : 200,
         "state" : "Goa",
         "City" : "Goa",
@@ -17,9 +18,9 @@
                "Wifi" : true,
                "Free cancellation" : false,
                "Pool" : false,
-               "Air condition" : true,
+               "Air condition" : false,
                "Kitchen" : false,
-               "Free parkink" : true,
+               "Free parkink" : false,
                "Washing machine" : false
            },
            "Tax" : 132 
@@ -42,7 +43,7 @@
                "Wifi" : true,
                "Free cancellation" :false,
                "Pool" : false,
-               "Air condition" : true,
+               "Air condition" : false,
                "Kitchen" : true,
                "Free parkink" : true,
                "Washing machine" : false
@@ -139,8 +140,8 @@
           "Tagline" : "Hut hosted by Vinayak",
           "About" : "Cozy and casual beach front Huts, for the easy going way of life near the coast. Nested in North goa, Arambol the rooms are simple and sober with all the huts having sea view. The space is located on the cliff side of the famous Arambol walkway market. Ideally suitable for the people who want to enjoy the beach side of goa, away from the people and looking for a rejuvenating holiday.",
            "Facility" : {
-            "Wifi" : true,
-            "Free cancellation" : false,
+            "Wifi" :false,
+            "Free cancellation" : true,
             "Pool" : true,
             "Air condition" : true,
             "Kitchen" : true,
@@ -398,7 +399,332 @@
             "Washing machine" : false
            },
            "Tax" : 123
+    },
+    {
+        "id" : 300,
+        "state" : "Odisha",
+        "City" : "Bhubaneswar",
+        "Hotel name" : "Mangowoods Serenity",
+        "Room Avialable" : 2,
+        "Price" : 11186,
+        "Image1" : "https://a0.muscache.com/im/pictures/65d56117-1499-4d96-92e4-545c2174b9ad.jpg?im_w=720",
+        "Image2" : "https://a0.muscache.com/im/pictures/5e341aa4-53c4-4c96-905b-3de84dedc281.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/c331b020-e481-43c6-990d-8489584d9a17.jpg?im_w=1200",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Farm stay hosted by Pavan Kumar Reddy",
+          "About" : "This space is 1200sq yard of lush green gardens and mango plantation. The stay is a wooden cottage designed to take you back in time... Antique interiors hand picked by host himself will take you to a different era of 1950's .",
+           "Facility" : {
+               "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 223
+    },
+    {
+        "id" : 301,
+        "state" : "Odisha",
+        "City" : "Bhubaneswar",
+        "Hotel name" : "Entire guest suite",
+        "Room Avialable" : 3,
+        "Price" : 1540,
+        "Image1" : "https://a0.muscache.com/im/pictures/ecfc68f4-a06c-4bf2-8e6b-fb0747ebc405.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/6eda0841-4892-4d0f-8b68-5b50c8707be7.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/d1184621-b540-4e14-aae6-51cb35bad673.jpg?im_w=720",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire guest suite hosted by Manoj",
+          "About" : "Lovingluving - your home moves with YOU. A homestay dedicatedly for parents visiting their loved one, married couples in a holiday trip, family for a vacation, vivid travellers visiting Bhubaneswar and Odisha to explore the land and it's culture.you will feel home as very neatly maintained to make you feel being at home. Not just a closed room but a spacious living room and big balcony to enjoy the freshness of breathing.",
+                        
+           "Facility" : {
+            "Wifi" : true,
+            "Free cancellation" : true,
+            "Pool" : false,
+            "Air condition" : true,
+            "Kitchen" : true,
+            "Free parkink" : true,
+            "Washing machine" : false
+           },
+           "Tax" : 128
+    },
+    {
+        "id" : 302,
+        "state" : "Odisha",
+        "City" : "Bhubaneswar",
+        "Hotel name" : "Luxury Cabana@ Birdsong home.",
+        "Room Avialable" : 2,
+        "Price" : 2100,
+        "Image1" : "https://a0.muscache.com/im/pictures/65d56117-1499-4d96-92e4-545c2174b9ad.jpg?im_w=720",
+        "Image2" : "https://a0.muscache.com/im/pictures/5e341aa4-53c4-4c96-905b-3de84dedc281.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/c331b020-e481-43c6-990d-8489584d9a17.jpg?im_w=1200",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Farm stay hosted by Pavan Kumar Reddy",
+          "About" : "This space is 1200sq yard of lush green gardens and mango plantation. The stay is a wooden cottage designed to take you back in time... Antique interiors hand picked by host himself will take you to a different era of 1950's .",
+           "Facility" : {
+            "Wifi" : true,
+            "Free cancellation" : true,
+            "Pool" : true,
+            "Air condition" : true,
+            "Kitchen" : false,
+            "Free parkink" : true,
+            "Washing machine" : false
+           },
+           "Tax" : 123
+    },
+    {
+        "id" : 303,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "Sanitised Private Apt ★ Spacious, Central & Secure",
+        "Room Avialable" : 5,
+        "Price" : 2700,
+        "Image1" : "https://a0.muscache.com/im/pictures/03034c33-35b0-40a3-82a1-f9564aff8af0.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/b4cba134-fb38-4bc8-8515-3dc544fcf5e4.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/dd6ab12f-d885-44c0-b9c8-bf0dcd6cb475.jpg?im_w=720",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Farm stay hosted by Pavan Kumar Reddy",
+          "About" : "This space is 1200sq yard of lush green gardens and mango plantation. The stay is a wooden cottage designed to take you back in time... Antique interiors hand picked by host himself will take you to a different era of 1950's .",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 123
+    },
+    {
+        "id" : 304,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "𝓙𝓸𝓮𝔂’𝓼 𝓝𝓮𝓼𝓽 Deluxe Apartment in SALTLAKE- IT Hub",
+        "Room Avialable" : 5,
+        "Price" : 3700,
+        "Image1" : "https://a0.muscache.com/im/pictures/70f5278f-178e-4429-932b-48c7bd9e473b.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/422de479-497c-4bdc-95e0-43cfa54b483d.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/46f1a6af-9b30-4b14-8877-c1ef5b1a34b1.jpg?im_w=720",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire apartment hosted by Prasanta Kumar",
+          "About" : "Located 15 mins (600 meter) walking distance from Sector V. 5 mins from Metro station and bus stop.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : true,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 483
+    },
+    {
+        "id" : 305,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "Elite service apartment near Kolkata Airport",
+        "Room Avialable" : 5,
+        "Price" : 1000,
+        "Image1" : "https://a0.muscache.com/im/pictures/e87e81ee-3fc4-4e3a-983d-d6249b55c6c2.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/a78561a2-947b-4927-9952-4cd620da8c44.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/107b63bc-b858-4c60-bcdc-9b24212b2953.jpg?im_w=720",
+        "Review" : 41,
+         "Rating" : 2.86 ,
+          "Tagline" : "Entire apartment hosted by Jayeeta",
+          "About" : "It’s a cozy calm place situated on Kholishakota main road 30 seconds drive from Belghoria expressway. My place is having access to many Dhabas n Restaurants near by. Local market is in walking distance and everything is found there whatever is required for a comfortable stay.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 123
+    },
+    {
+        "id" : 306,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "Modern Unique Studio Apartment in Central Kolkata",
+        "Room Avialable" : 2,
+        "Price" : 2100,
+        "Image1" : "https://a0.muscache.com/im/pictures/bebb92a4-fd80-427b-9165-a7b3bd378d5e.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/ce7de146-8484-4d6b-9ff2-297b1798bacb.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/448c5add-7de4-43bd-8913-57ae16132e5c.jpg?im_w=720",
+        "Review" : 71,
+         "Rating" : 3.86 ,
+          "Tagline" : "Entire apartment hosted by Rekha",
+          "About" : "Located at the heart of central Kolkata (Near GD Hospital), this place is within few minutes distance to new market, park street and esplanade (Dharmatalla).Whether you are a tourist or a businessman this location will suit all, as this place is close to majority of tourist destinations and business/shopping centres and is well connected with public transport plus OLA/UBER.",
+           "Facility" : {
+            "Wifi" : false,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 123
+    },
+    {
+        "id" : 307,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "PRANIK 4 COSY HOME STAY near RUBY HOSPITAL",
+        "Room Avialable" : 7,
+        "Price" : 2700,
+        "Image1" : "https://a0.muscache.com/im/pictures/644cd8e2-4be0-4800-afbe-f3f72f5221d5.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/cdd97774-2886-48e5-b84a-5503efdd982d.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/1e9dd346-8309-45f1-97c3-6ebac3ab01bb.jpg?im_w=720",
+        "Review" : 11,
+         "Rating" : 1.86 ,
+          "Tagline" : "Farm stay hosted by Pavan Kumar Reddy",
+          "About" : "This host has committed to Airbnb's 5-step enhanced cleaning process",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 123
+    },
+    {
+        "id" : 308,
+        "state" : "West Bengal",
+        "City" : "Kolkata",
+        "Hotel name" : "Siddha Xanadu, Alpha II, Apt- 831",
+        "Room Avialable" : 5,
+        "Price" : 2700,
+        "Image1" : "https://a0.muscache.com/im/pictures/dd392049-c639-4b44-bf1d-bad7a229f1a2.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/fef93046-7053-4a41-aea6-265026fd9aa1.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/7ad9bd2f-831d-4bf5-ae9e-a146c64f4269.jpg?im_w=720",
+        "Review" : 11,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire serviced apartment hosted by Ronit",
+          "About" : "Enjoy smart studio room with modern amenities.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 323
+    },
+    {
+        "id" : 309,
+        "state" : "Jammu and kashmir",
+        "City" : "Jammu and kashmir",
+        "Hotel name" : "Walisons Peace Resort",
+        "Room Avialable" : 5,
+        "Price" : 2700,
+        "Image1" : "https://a0.muscache.com/im/pictures/64ce4a1e-4fa2-4f19-bc58-ae51c8a13a73.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/b6f3bbfe-9bec-43b9-ab9b-95b60d5d53bc.jpg?im_w=720",
+        "Image3": "https://a0.muscache.com/im/pictures/0ed30829-54b0-4068-bc6f-716ec2e54030.jpg?im_w=720",
+        "Review" : 51,
+         "Rating" : 2.86 ,
+          "Tagline" : "Room in boutique hotel hosted by Omer",
+          "About" : "There is a small kitchen for the guests as well and we can also provide you with breakfast ,lunch or dinner for which we have an a la carte menu.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : true,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : true
+           },
+           "Tax" : 123
+    },{
+        "id" : 310,
+        "state" : "Jammu and kashmir",
+        "City" : "Jammu and kashmir",
+        "Hotel name" : "Naivasha - a tranquil orchard studio near Dal Lake",
+        "Room Avialable" : 5,
+        "Price" : 800,
+        "Image1" : "https://a0.muscache.com/im/pictures/64ce4a1e-4fa2-4f19-bc58-ae51c8a13a73.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/b6f3bbfe-9bec-43b9-ab9b-95b60d5d53bc.jpg?im_w=720",
+        "Image3" : "https://a0.muscache.com/im/pictures/352d57d9-5f2b-485c-8cd0-12a091db7a65.jpg?im_w=720",
+        "Review" : 29,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire guest suite hosted by Fozia",
+          "About" : "Naivasha @ Ladakh House is a quiet retreat, with urban amenities close at hand. This Condé Nast recommended self-service studio overlooks a beautiful orchard and offers a rare green oasis in an urban setting. It is a short walk from the Dal Lake, Naseem Bagh and Hazratbal. It is also en route to Sonmarg and Ladakh.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : false,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : false
+           },
+           "Tax" : 129
+    },{
+        "id" : 311,
+        "state" : "Jammu and kashmir",
+        "City" : "Jammu and kashmir",
+        "Hotel name" : "Warm & cozy place for homely experience in kashmir",
+        "Room Avialable" : 5,
+        "Price" : 4700,
+        "Image1" : "https://a0.muscache.com/im/pictures/3e71ea1b-e17b-4ded-9bd5-55704f10ba29.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/64ce4a1e-4fa2-4f19-bc58-ae51c8a13a73.jpg?im_w=960",
+        "Image3" : "https://a0.muscache.com/im/pictures/b6f3bbfe-9bec-43b9-ab9b-95b60d5d53bc.jpg?im_w=720",
+        "Review" : 61,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire cottage hosted by Sargam",
+          "About" : "Naivasha @ Ladakh House is a quiet retreat, with urban amenities close at hand. This Condé Nast recommended self-service studio overlooks a beautiful orchard and offers a rare green oasis in an urban setting. It is a short walk from the Dal Lake, Naseem Bagh and Hazratbal. It is also en route to Sonmarg and Ladakh.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : false,
+               "Air condition" : true,
+               "Kitchen" : true,
+               "Free parkink" : true,
+               "Washing machine" : true
+           },
+           "Tax" : 999
+    },{
+        "id" : 312,
+        "state" : "Jammu and kashmir",
+        "City" : "Jammu and kashmir",
+        "Hotel name" : "Fair Lawn Dalhousie",
+        "Room Avialable" : 2,
+        "Price" : 7700,
+        "Image1" : "https://a0.muscache.com/im/pictures/9032ba3c-569c-452c-8c28-3fff0ee1ddf1.jpg?im_w=960",
+        "Image2" : "https://a0.muscache.com/im/pictures/64ce4a1e-4fa2-4f19-bc58-ae51c8a13a73.jpg?im_w=960",
+        "Image3" : "https://a0.muscache.com/im/pictures/b6f3bbfe-9bec-43b9-ab9b-95b60d5d53bc.jpg?im_w=720",
+        "Review" : 21,
+         "Rating" : 4.86 ,
+          "Tagline" : "Entire guest suite hosted by Fozia",
+          "About" : "Naivasha @ Ladakh House is a quiet retreat, with urban amenities close at hand. This Condé Nast recommended self-service studio overlooks a beautiful orchard and offers a rare green oasis in an urban setting. It is a short walk from the Dal Lake, Naseem Bagh and Hazratbal. It is also en route to Sonmarg and Ladakh.",
+           "Facility" : {
+            "Wifi" : true,
+               "Free cancellation" : true,
+               "Pool" : false,
+               "Air condition" : false,
+               "Kitchen" : false,
+               "Free parkink" : true,
+               "Washing machine" : true
+           },
+           "Tax" : 123
     }
-   
-   
+
+
 ]
+   
+}

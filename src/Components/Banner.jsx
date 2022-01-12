@@ -5,17 +5,17 @@ import Search from './Search';
 import {useHistory} from "react-router-dom"
 function Banner() {
     const history = useHistory();
-    const [showSearch, setShowSearch] = useState(false);
+    // const [showSearch, setShowSearch] = useState(false);
 
     return (
         <div className={style.bannerbackground}>
         <div className={style.banner}>
             <div className={style.banner__search}>
-                {showSearch && <Search />}
+                {/* {showSearch && <Search />}
 
                 <Button onClick={() => setShowSearch(!showSearch)} className={style.banner__searchButton} variant='outlined'>
                     {showSearch ? "Hide" : "Search Dates"}
-                </Button>
+                </Button> */}
             </div>
             <div className={style.banner__info}>
                 <h1>Note sure where to go?  Perfect.</h1>

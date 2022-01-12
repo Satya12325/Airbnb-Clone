@@ -1,20 +1,83 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import data from "../db.json";
+import axios from "axios";
 import "./cityWise.css";
-
+import {useState, useEffect} from "react"
+const fetchUser = () => {
+    return axios.get('http://localhost:3000/Available')
+}
 const ListOfCityHotel = () => {
+     const [data, setData] = useState([]);
+    const [isLoding, setIsLoading] = useState(true);
     const cityname = useSelector((state) => state.cityname);
     const freecancelations = useSelector((state) => state.freecancelation);
-    console.log(freecancelations)
+    const wifi = useSelector((state) => state.Wifi);
+    const kitchen = useSelector((state) => state.kitchen);
+    const Aircondition = useSelector((state) => state.Aircondition);
+    const WashingMachine = useSelector((state) => state.WashingMachine);
+    const Pool = useSelector((state) => state.Pool);
+    const FreeParking = useSelector((state) => state.FreeParking);
+    console.log(wifi,kitchen,Aircondition,WashingMachine,Pool,FreeParking);
+
+    const handleFetch = async () => {
+        try {
+            setIsLoading(true);
+            const List = await fetchUser();
+            setData(List);
+            setIsLoading(false);
+            
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
+    useEffect(() => {
+        handleFetch();
+    },[]);
+
+    if(isLoding) {
+        return (<div className="flex">
+        <div className ="spinner">
+        </div>
+        ...Looding
+        </div>)
+    }
+
+
     return (
         <>
         
-        {data.filter((item) => 
-         item.City == cityname
+        {data?.data.filter((item) => 
+         item.City === cityname
          )
         .filter((item) => 
-         item.Facility["Free cancellation"] == freecancelations
+         freecancelations ? 
+              item.Facility["Free cancellation"] == freecancelations : true
+         ) 
+         .filter((item) => 
+         wifi ? 
+              item.Facility.Wifi == wifi : true
+         ) 
+         .filter((item) => 
+         kitchen ? 
+              item.Facility.Kitchen == kitchen : true
+         ) 
+         .filter((item) => 
+         Aircondition ? 
+              item.Facility["Air condition"] == Aircondition : true
+         ) 
+         .filter((item) => 
+          WashingMachine ? 
+              item.Facility["Washing machine"] == WashingMachine : true
+         ) 
+         .filter((item) => 
+         Pool ? 
+              item.Facility.Pool == Pool : true
+         ) 
+         .filter((item) => 
+         FreeParking ? 
+              item.Facility["Free parkink"] == FreeParking : true
          ) 
          .map((item) => (
              <div key={item.id} >
@@ -24,7 +87,7 @@ const ListOfCityHotel = () => {
                  <img src={item.Image1} className="image"  />
                  </div>
                  <div className="second_box_detalis">
-                  <p>Private room in {cityname}</p>   
+                  <p>Private room in {item.cityname}</p>   
                   <p>{item["Hotel name"]}</p>
                   <hr  />
                   <p>2 guests 1 bedroom 2 beds 1 private bathroom</p>

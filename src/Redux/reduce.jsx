@@ -1,10 +1,14 @@
 import { appComponet } from "./actionType"
 
 const initState = {
-    cityname : "Bangalore",
+    cityname : "Goa",
     freecancelation: false,
     Wifi : false,
-    kitchen : false
+    kitchen : false,
+    Aircondition : false,
+    WashingMachine : false,
+    Pool : false,
+    FreeParking : false
 }
 
 export const reduce = (state  = initState , {payload , type}  ) => {
@@ -18,7 +22,7 @@ export const reduce = (state  = initState , {payload , type}  ) => {
         case appComponet.FILTER_WIFI : {
             return {
                 ...state,
-                Wifi : true,
+                Wifi : payload ? false : true,
             }
         }
         case appComponet.FILTER_FREE_CANCELLATION : {
@@ -30,7 +34,31 @@ export const reduce = (state  = initState , {payload , type}  ) => {
         case appComponet.FILTER_KITCHEN : {
             return{
                 ...state,
-                kitchen : true
+                kitchen : payload ? false : true
+            }
+        }
+        case appComponet.FILTER_AIR_CONDITIONING : {
+            return{
+                ...state,
+                kitchen : payload ? false : true
+            }
+        }
+        case appComponet.FILTER_WASHING_MACHINE : {
+            return{
+                ...state,
+                WashingMachine : payload ? false : true
+            }
+        }
+        case appComponet.FILTER_POOL : {
+            return{
+                ...state,
+                Pool : payload ? false : true
+            }
+        }
+        case appComponet.FILTER_FREE_PARKING : {
+            return{
+                ...state,
+                FreeParking : payload ? false : true
             }
         }
         default :  
