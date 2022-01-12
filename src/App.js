@@ -11,6 +11,7 @@ function App() {
       <HotelCityList /> 
       {/* <Header/>
       <Home/>
+      <Footer/>
       <Footer /> */}
     </div>
   );
