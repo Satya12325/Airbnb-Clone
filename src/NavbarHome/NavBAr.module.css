@@ -1,13 +1,19 @@
+.Navbartop{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+
+}
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    z-index: 100;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 0px;
+  
   }
   
   .header__icon {

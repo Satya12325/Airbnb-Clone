@@ -1,46 +1,46 @@
 export default [
     {
-        "City" : Bangalore
+        "City" : "Bangalore"
     },
     {
-        "City" : gwalior
+        "City" : "gwalior"
     },
     {
-        "City" : Indore
+        "City" : "Indore"
     },
     {
-        "City" : Gurugram
+        "City" : "Gurugram"
     },
     {
-        "City" : NewDelhi
+        "City" : "New Delhi"
     },
     {
-        "City" : Chandigarh
+        "City" : "Chandigarh"
     },
     {
-        "City" :Goa
+        "City" : "Goa"
     },
     {
-        "City" : Telangana
+        "City" : "Telangana"
     },
     {
-        "City" : Bhubaneswar
+        "City" : "Bhubaneswar"
     },
     {
-        "City" : Kolkata
+        "City" : "Kolkata"
     },
     {
         "City" : "Jammu and Kashmir"
     },
     {
-        "City" : Ajmer
+        "City" : "Ajmer"
     },
     {
-        "City" : Banda
+        "City" : "Banda"
     },
     {
-        "City" : Betul
+        "City" : "Betul"
     },{
-        "City" : Jaipur
+        "City" : "Jaipur"
     }
 ]
