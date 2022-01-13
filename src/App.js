@@ -3,15 +3,17 @@ import './App.css';
 import HotelCityList from './component/HotelCityList';
 import Home from "./Pages/Home.jsx";
 import Header from "./Header/Header.jsx"
-
+import Footer from "./Footer/Footer.jsx"
+import LandingPageHost from './HostPage/LandingPageHost';
+import FillHost from './HostPage/FillHost';
 function App() {
   return (
     <div className="App">
-      <HotelCityList /> 
-      {/* <Header/>
+      {/* <HotelCityList />  */}
+      <Header/>
       <Home/>
-      <Footer/>
-      <Footer /> */}
+      <Footer />
+      {/* <FillHost /> */}
     </div>
   );
 }
