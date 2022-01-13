@@ -4,12 +4,18 @@ import Banner from '../Components/Banner'
 import Card from '../Components/Card'
 import SmallBanner from '../Components/SmallBanner';
 import BottomBanner from '../Components/BottomBanner';
+
+import Footer from "../Footer/Footer";
+import NavBar from '../NavbarHome/NavBAr'
 // ES7 snippets to do 'rfce'
+
 
 function Home() {
 
     var card_colr = ["#CC2D4A","#DE3151","#BC1A6E","#D93B30"]
     return (
+        <>
+        <NavBar/>
         <div className={style.home}>
             <Banner />
             <div>
@@ -61,6 +67,8 @@ function Home() {
             </div>
             <BottomBanner/>
         </div>
+        <Footer/>
+        </>
     )
 }
 
