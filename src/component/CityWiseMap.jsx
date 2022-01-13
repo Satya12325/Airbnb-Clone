@@ -7,7 +7,7 @@ const CityWiseMap = () => {
     const [height , setHeight] = useState(false);
     window.addEventListener('scroll',() =>{
         var scrollTop = document.documentElement.scrollTop;
-       if(scrollTop >= 1170){
+       if(scrollTop >= 1100){
            console.log("true");
            setHeight(true);
        }
@@ -18,7 +18,7 @@ const CityWiseMap = () => {
     })
     
     return(     
-   <div className="city_map_image" style={ { position: height ? 'absolute' : 'fixed' , marginTop: height ? '1000px' : '0px' } } >
+   <div className="city_map_image" style={ { position: height ? 'absolute' : 'fixed' , marginTop: height ? '1000px' : '20px' } } >
     
     <div >
         <iframe 

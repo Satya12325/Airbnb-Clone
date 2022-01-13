@@ -1,19 +1,80 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import style from './NavBAr.module.css'
 import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Avatar } from "@material-ui/core";
-
 import Search from '../Components/Search';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import CityList from "../NavbarHome/cityList/citylist";
+import styled from "styled-components";
+import { useDispatch } from 'react-redux';
+import { hotelcity } from '../Redux/action';
 
+const SuggestionBox = styled.div`
+ display : ${({len}) =>(len !== 0 ? "Flex" : "none")};
+ flex-direction : column;
+ felx : 0 0 auto;
+ max-height :150px;
+ overflow : auto;
+ border : 1px solid black;
+ width:200px;
+ margin-left:400px;
+margin-top:0px;
+margin-bottom:4px;
+ & * {
+     flex  :1;
+     padding : 5px;
+     text-align : left;
+     padding-left : 30px;
+ }
+ & :nth-child(${({ active }) => active}) {
+    background: gray;
+    color: white;
+    font-weight: bold;
+  }
+  & : nth-child(n + ${({limit}) => limit+1}){
+      display : none;
+  }
+`;
 
 function NavBar() {
      const [showSearch, setShowSearch] = useState(false);
+     const [searchText , setSearchText] = useState("");
+     const [suggestion , setSuggestion] = useState([]);
+     const [isLoading , setLoading] = useState(false);
+     const [active ,setActive] = useState(0);
+     const [value , setValue] = useState("");
+     const dispatch = useDispatch();
 
+     const onClickList = (title) => {
+         setSearchText(title);
+         setLoading(false);
+         setValue(title);
+         dispatch(hotelcity(title));
+     }
+
+     useEffect(() => {
+        if(searchText == "" || searchText ==  value){
+            setSuggestion([]);
+            setLoading(false)
+        }
+        else{
+            setLoading(true);
+            dispatch(hotelcity(searchText));
+            let out = CityList.filter((item) => (
+            item.City.indexOf(searchText) !== -1 ? true : false
+         ))
+         setSuggestion(out);
+        }
+     },[searchText])
+
+     
+     console.log(suggestion,active);
     return (
+        <div className={style.Navbartop}>
+
         <div className={style.header}>
             {/* <Link to='/'> */}
                 <img
@@ -23,9 +84,14 @@ function NavBar() {
                 />
             {/* </Link> */}
            
+             
             <div className={style.header__center}>
                                
-                <input className={style.inputSearch} type="text" placeholder='Start your search'/>
+                <input className={style.inputSearch}
+                   type="text" placeholder='Start your search'
+                   value={searchText} onChange={(e) => setSearchText(e.target.value)}
+                   />
+                     
                
                 {showSearch && <Search />}
 
@@ -38,11 +104,20 @@ function NavBar() {
             </div>
            
             <div className={style.header__right}>
-                <p>Become a host</p>
+               <Link to="/host">
+                Become a host
+               </Link>
                 <LanguageIcon />
                 <ExpandMoreIcon />
                 <Avatar />
             </div>
+            
+        </div>
+        {isLoading && <SuggestionBox active={active} limit={5}>
+        {suggestion.map((item,index) => (
+            <div  key={item.City} onMouseOver={() => setActive(index+1)} onClick={() => onClickList(item.City)}>{item.City}</div>
+        ))}
+              </SuggestionBox>} 
         </div>
     )
 }

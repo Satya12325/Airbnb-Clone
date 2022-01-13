@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Home.module.css';
 import Banner from '../Components/Banner'
 import Card from '../Components/Card'
@@ -7,15 +7,34 @@ import BottomBanner from '../Components/BottomBanner';
 
 import Footer from "../Footer/Footer";
 import NavBar from '../NavbarHome/NavBAr'
+import { useDispatch } from 'react-redux';
+import { hotelcity } from '../Redux/action';
+import { Redirect, useHistory } from 'react-router-dom';
+import Header from '../Header/Header';
 // ES7 snippets to do 'rfce'
 
 
 function Home() {
-
-    var card_colr = ["#CC2D4A","#DE3151","#BC1A6E","#D93B30"]
+    const dispatch = useDispatch();
+    const [changenavbar , setNavbar] = useState(false);
+    var card_colr = ["#CC2D4A","#DE3151","#BC1A6E","#D93B30"];
+    let history = useHistory();
+    const onClickNextPage = (title) => {
+      dispatch(hotelcity(title));
+      history.push('/hotels')
+     }
+     window.addEventListener('scroll',() =>{
+        var scrollTop = document.documentElement.scrollTop;
+        if(scrollTop >= 100){
+            setNavbar(true);
+        }
+        else if(scrollTop < 100){
+         setNavbar(false);
+        }
+    })
     return (
         <>
-        <NavBar/>
+        {changenavbar ? <Header/> : <NavBar/>}
         <div className={style.home}>
             <Banner />
             <div>
@@ -25,26 +44,30 @@ function Home() {
             <Card
                 bgcolor={card_colr[0]}
                 src="https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=480"
-                title="Lonavla"
-                description="66 kilometer away"
+                title="Goa"
+                description="2344 kilometer away"
+                onClickpage={onClickNextPage}
             />
             <Card
                 bgcolor={card_colr[1]}
                 src="https://a0.muscache.com/im/pictures/6adb1a38-b912-4dd6-83d7-103bb9a80d43.jpg?im_w=480"
-                title="Karjat"
-                description="53 kilometer away"
+                title="Bangalore"
+                description="3453 kilometer away"
+                onClickpage={onClickNextPage}
             />
             <Card
             bgcolor={card_colr[2]}
                 src="https://a0.muscache.com/im/pictures/99eb5993-4277-4c1e-8db1-b639a96758a0.jpg?im_w=480"
-                title="Calangute"
+                title="Gurugram"
                 description="396 kilometer away"
+                onClickpage={onClickNextPage}
             />
             <Card
             bgcolor={card_colr[3]}
                 src="https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6a00f7d5d8.jpg?im_w=480"
-                title="Alibag"
-                description="36 kilometer away"
+                title="New Delhi"
+                description="100 kilometer away"
+                onClickpage={onClickNextPage}
             />
             </div>
             </div>

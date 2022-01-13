@@ -17,7 +17,7 @@ const ListOfCityHotel = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
-    console.log(wifi,kitchen,Aircondition,WashingMachine,Pool,FreeParking);
+   
 
     const handleFetch = async () => {
         try {
