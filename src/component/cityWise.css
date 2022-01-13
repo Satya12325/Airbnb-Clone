@@ -53,36 +53,3 @@
 .fillter_btn :hover{
     border: 1px solid black;
 }
-
-
-/* // Spin looding */
-
-.spinner{
-    border: 8px solid rgb(168, 163, 167);
-    border-top: 8px solid rgb(76, 0, 255);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    animation: 3s linear 0s infinite spinner;
-  }
-  .flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @keyframes spinner {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(270deg);
-        border-top-color: rgb(255, 0, 0);
-    }
-    75%{
-        transform: rotate(540deg);
-    }
-    100%{
-        transform: rotate(720deg);
-    }
-  }

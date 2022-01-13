@@ -7,10 +7,17 @@ const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
 const ListOfCityHotel = () => {
-    const cityname = useSelector((state) => state.cityname);
-
-    const [data, setData] = useState([]);
+     const [data, setData] = useState([]);
     const [isLoding, setIsLoading] = useState(true);
+    const cityname = useSelector((state) => state.cityname);
+    const freecancelations = useSelector((state) => state.freecancelation);
+    const wifi = useSelector((state) => state.Wifi);
+    const kitchen = useSelector((state) => state.kitchen);
+    const Aircondition = useSelector((state) => state.Aircondition);
+    const WashingMachine = useSelector((state) => state.WashingMachine);
+    const Pool = useSelector((state) => state.Pool);
+    const FreeParking = useSelector((state) => state.FreeParking);
+    console.log(wifi,kitchen,Aircondition,WashingMachine,Pool,FreeParking);
 
     const handleFetch = async () => {
         try {
@@ -18,7 +25,7 @@ const ListOfCityHotel = () => {
             const List = await fetchUser();
             setData(List);
             setIsLoading(false);
-            console.log(List)
+            
         }
         catch (error) {
             console.error(error);
@@ -44,6 +51,34 @@ const ListOfCityHotel = () => {
         {data?.data.filter((item) => 
          item.City === cityname
          )
+        .filter((item) => 
+         freecancelations ? 
+              item.Facility["Free cancellation"] == freecancelations : true
+         ) 
+         .filter((item) => 
+         wifi ? 
+              item.Facility.Wifi == wifi : true
+         ) 
+         .filter((item) => 
+         kitchen ? 
+              item.Facility.Kitchen == kitchen : true
+         ) 
+         .filter((item) => 
+         Aircondition ? 
+              item.Facility["Air condition"] == Aircondition : true
+         ) 
+         .filter((item) => 
+          WashingMachine ? 
+              item.Facility["Washing machine"] == WashingMachine : true
+         ) 
+         .filter((item) => 
+         Pool ? 
+              item.Facility.Pool == Pool : true
+         ) 
+         .filter((item) => 
+         FreeParking ? 
+              item.Facility["Free parkink"] == FreeParking : true
+         ) 
          .map((item) => (
              <div key={item.id} >
                 <hr />
