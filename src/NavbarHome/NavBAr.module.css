@@ -8,7 +8,6 @@
     z-index: 100;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
-    
   }
   
   .header__icon {
@@ -22,17 +21,19 @@
     flex: 1;
     align-items: center;
     max-width: fit-content;
-    padding: 10px;
-    height: 35px;
+    border-radius:20px;
+    height: 55px;
     border: 1px solid lightgray;
     border-radius: 999px;
   }
   
   .header__center > input {
     border: none;
-    padding: 10px;
+    border-radius:30px;
     outline-width: 0;
     /* width: 250px; */
+    padding: 0px 10px;
+   
   }
   
   .header__right {
@@ -41,4 +42,24 @@
     justify-content: space-between;
     width: 15vw;
     margin-right: 80px;
+  }
+  .searchButton{
+      border: none;
+      border-radius:30px;
+      height: 55px;
+      width: 250px;
+      background-color: transparent;
+
+  }
+  .inputSearch{
+      width: 150px;
+      background-color: transparent;
+      height: 55px;
+      cursor: pointer;
+  }
+  .inputSearch:hover{
+    background-color: rgb(226, 223, 223);
+  }
+  .searchButton:hover{
+    background-color: rgb(226, 223, 223);
   }

@@ -63,8 +63,8 @@ return (
                <div><LanguageIcon/><b><u>English(in)</u></b></div> 
                 <div><b>₹ <u>INR</u></b></div>
                 <div className={style.footerIcon}>
-                <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
+                <i className="fab fa-facebook-f"></i>
+                    <i className="fab fa-twitter"></i>
                     <InstagramIcon/>
                 </div>
             </div>

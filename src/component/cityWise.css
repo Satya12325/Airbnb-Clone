@@ -1,11 +1,12 @@
 .city_box{
     display: flex;
     margin-left: 10px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .Hotel_detalis{
     display: flex;
     width: 700px;
+
 }
 .second_box_detalis{
     margin-left: 12px;
@@ -24,7 +25,7 @@
     margin-top: 140px;
 }
 .city_map_image{
-    margin-top: 30px;
+   top: 200px;
     position: fixed;
 }
 .city_map_image div iframe{
@@ -38,6 +39,7 @@
     width: 100%;
     z-index: 100;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+    top: 100px;
 }
 .fillter_btn{
     border-radius: 20px;
@@ -51,36 +53,3 @@
 .fillter_btn :hover{
     border: 1px solid black;
 }
-
-
-/* // Spin looding */
-
-.spinner{
-    border: 8px solid rgb(168, 163, 167);
-    border-top: 8px solid rgb(76, 0, 255);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    animation: 3s linear 0s infinite spinner;
-  }
-  .flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @keyframes spinner {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(270deg);
-        border-top-color: rgb(255, 0, 0);
-    }
-    75%{
-        transform: rotate(540deg);
-    }
-    100%{
-        transform: rotate(720deg);
-    }
-  }

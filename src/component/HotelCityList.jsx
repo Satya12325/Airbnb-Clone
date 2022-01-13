@@ -3,25 +3,53 @@ import CityWiseMap from "./CityWiseMap";
 import ListOfCityHotel from "./ListOfCityHotel";
 import "./cityWise.css";
 import Header from "../Header/Header";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../Footer/Footer";
+import { filterAircondition, filterfreecancelation, filterFreeparking, filterkitchen, filterPool, filterWashingmachine, filterwifi } from "../Redux/action";
 
 const HotelCityList = () => {
     const dispatch = useDispatch();
     const cityname = useSelector((state) => state.cityname);
-    console.log(cityname);
+    const freecancelations = useSelector((state) => state.freecancelation);
+    const wifi = useSelector((state) => state.Wifi);
+    const kitchen = useSelector((state) => state.kitchen);
+    const Aircondition = useSelector((state) => state.Aircondition);
+    const WashingMachine = useSelector((state) => state.WashingMachine);
+    const Pool = useSelector((state) => state.Pool);
+    const FreeParking = useSelector((state) => state.FreeParking);
+    const freecancelationClick = () => {
+        dispatch(filterfreecancelation(freecancelations))
+     }
+     const wifiClick = () => {
+      dispatch(filterwifi(wifi))
+     }
+     const kitchenClick = () => {
+      dispatch(filterkitchen(kitchen))
+     }
+     const airconditionClick = () => {
+      dispatch(filterAircondition(Aircondition))
+     }
+     const washingmachineClick = () => {
+      dispatch(filterWashingmachine(WashingMachine))
+     }
+     const poolClick = () => {
+      dispatch(filterPool(Pool))
+     }
+     const freeParkingClick = () => {
+      dispatch(filterFreeparking(FreeParking))
+     }
+
     return(
         <>
         <Header />
       <div className="fillter_box_btn">
             <button className="fillter_btn">Price</button>
-            <button className="fillter_btn">Free cancellation</button>
-            <button className="fillter_btn">Wifi</button>
-            <button className="fillter_btn">Kitchen</button>
-            <button className="fillter_btn" >Air conditioning</button>
-            <button className="fillter_btn">Washing machine</button>
-            <button className="fillter_btn">Pool</button>
-            <button className="fillter_btn">Kitchen</button>
-            <button className="fillter_btn">Free parking</button>
+            <button className="fillter_btn" onClick={() => freecancelationClick()}>Free cancellation</button>
+            <button className="fillter_btn" onClick={() => wifiClick()}>Wifi</button>
+            <button className="fillter_btn" onClick={() => kitchenClick()}>Kitchen</button>
+            <button className="fillter_btn" onClick={() => airconditionClick()}>Air conditioning</button>
+            <button className="fillter_btn" onClick={() => washingmachineClick()}>Washing machine</button>
+            <button className="fillter_btn" onClick={() => poolClick()}>Pool</button>
+            <button className="fillter_btn" onClick={() => freeParkingClick()}>Free parking</button>
         </div>
         <div className="city_box">
       <div>
