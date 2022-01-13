@@ -27,7 +27,7 @@ function Header() {
             </div>
             
             <div className={style.header__right}>
-                <p>Become a host</p>
+               <Link to="/host">Become a host</Link>
                 <LanguageIcon />
                 <ExpandMoreIcon />
                 <Avatar />
