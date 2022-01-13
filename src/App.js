@@ -6,14 +6,18 @@ import Header from "./Header/Header.jsx"
 import Footer from "./Footer/Footer.jsx"
 import LandingPageHost from './HostPage/LandingPageHost';
 import FillHost from './HostPage/FillHost';
+import AllpageRout from './Router/AllpageRout';
 function App() {
   return (
     <div className="App">
       {/* <HotelCityList />  */}
-      <Header/>
+      {/* <Header/>
       <Home/>
-      <Footer />
+      <Footer /> */}
       {/* <FillHost /> */}
+     
+      <AllpageRout/>
+      
     </div>
   );
 }
