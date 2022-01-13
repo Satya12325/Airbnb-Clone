@@ -105,7 +105,7 @@ function NavBar() {
            
             <div className={style.header__right}>
                <Link to="/host">
-                <p>Become a host</p>
+                Become a host
                </Link>
                 <LanguageIcon />
                 <ExpandMoreIcon />
