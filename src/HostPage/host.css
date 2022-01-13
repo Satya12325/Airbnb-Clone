@@ -17,5 +17,10 @@
     color: white;
 }
 .form_box{
-    border:1px solid black
+    margin-Top : 150px;
+    margin-left: 60px;
+}
+.form_box input{
+    margin:20px;
+    text-align: center;
 }
