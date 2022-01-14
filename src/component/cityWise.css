@@ -25,6 +25,7 @@
 .city_map_image{
    top: 200px;
     position: fixed;
+   
 }
 .city_map_image div iframe{
     width: 600px;
@@ -50,4 +51,32 @@
 }
 .fillter_btn :hover{
     border: 1px solid black;
+}
+
+/* for spining */
+
+
+.spinner{
+    border: 8px solid rgb(168, 163, 167);
+    border-top: 8px solid rgb(76, 0, 255);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: 3s linear 0s infinite spinner;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(270deg);
+        border-top-color: rgb(255, 0, 0);
+    }
+    75%{
+        transform: rotate(540deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
 }

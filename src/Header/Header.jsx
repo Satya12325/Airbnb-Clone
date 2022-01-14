@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Header.module.css'
 import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Avatar } from "@material-ui/core";
 import {Link} from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { hotelcity } from '../Redux/action';
 
 function Header() {
+    const [searchText , setSearchText] = useState("");
+    const dispatch = useDispatch();
+    const onClickSearch = () => {
+        dispatch(hotelcity(searchText));
+    }
     return (
         <div className={style.header}
         
@@ -22,8 +29,9 @@ function Header() {
             <div className={style.header__center}>
                 
                 
-                <input type="text" placeholder='Start your search'/>
-                <SearchIcon />
+                <input type="text" placeholder='Start your search' value={searchText} 
+                        onChange={(e) => setSearchText(e.target.value)}/>
+                <SearchIcon onClick={onClickSearch}/>
             </div>
             
             <div className={style.header__right}>

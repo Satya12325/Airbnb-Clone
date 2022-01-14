@@ -1,0 +1,182 @@
+import React from "react";
+import style from "./BookingPage.module.css";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import Paper from "@mui/material/Paper";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+import TextField from '@mui/material/TextField';
+import Cancellation from '../Components/CanceLation'
+import PriceDetails from '../Components/PriceDetails'
+import Footer from "../Footer/Footer";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
+
+
+export default function Booking() {
+
+    const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+
+
+  return (
+      <>
+    <div>
+      <div className={style.BookingNav}>
+        <img
+          style={{ height: "80px", paddingLeft: "20px", width: "120px" }}
+          src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
+          alt=""
+        />
+      </div>
+    <div style={{display: "flex",}}>
+      <div className={style.mainBook}>
+        <div className={style.return}>
+          <h1 style={{ fontWeight: "600" }}>
+            <ArrowBackIosIcon /> Request to book
+          </h1>
+        </div>
+
+        <div className={style.sub_div}>
+          <Paper
+            elevation={3}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              borderRadius: "10px",
+              padding: "10px",
+            }}
+          >
+            <div>
+              <h5 style={{ fontWeight: "600", lineHheight: 0 }}>
+                This is a rare find.
+              </h5>
+              <p style={{ lineHheight: 0, marginTop: 0 }}>
+                Priyadarsini's place is usually booked.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-diamond-sales-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
+                alt=""
+                style={{ marginTop: "20px", width: "40px" }}
+              />
+            </div>
+          </Paper>
+        </div>
+        <div className={style.sub_div}>
+          <h2 style={{ fontWeight: "600" }}>Your trip</h2>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <h5 style={{ fontWeight: "600", lineHheight: 0 }}>Dates</h5>
+            <p>18-19 Jan</p>
+          </div>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <h5 style={{ fontWeight: "600", lineHheight: 0 }}>Guests</h5>
+            <p>1 guest</p>
+          </div>
+          <hr/>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <h2 style={{ fontWeight: "600" }}>Pay with</h2>
+            <div>
+            <img style={{width:"24px", marginTop: "15px"}} src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+            <img  style={{width:"24px", marginTop: "15px"}} src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/000000/external-visa-an-american-multinational-financial-services-corporation-logo-shadow-tal-revivo.png" alt=""/>
+            <img  style={{width:"24px", marginTop: "15px"}} src="https://img.icons8.com/cotton/64/000000/amex.png"/>
+            </div>
+          </div>
+            <Accordion>
+                < AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                >
+                        <CreditCardIcon style={{marginRight: "10px", color: "gray"}}/>
+                    <span>
+                         Credit or Debit Card
+                    </span>                    
+                </AccordionSummary>
+                
+                <AccordionDetails
+                aria-controls="panel1a-content"
+                >
+                <CreditCardIcon style={{marginRight: "10px", color: "gray"}}/>
+                    <span>
+                         Credit or Debit Card
+                    </span>
+                </AccordionDetails>
+                
+            </Accordion>
+
+            <h5 style={{ fontWeight: "600", lineHheight: 0, cursor: "pointer" }} variant="outlined" onClick={handleClickOpen}><u>
+
+        Enter cupone code
+            </u>
+      </h5>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle style={{display: 'flex', width: '300px', justifyContent: "space-between"}}>
+        <Button onClick={handleClose}>x</Button>
+            {"Coupons"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+          <TextField id="outlined-basic" label="Outlined" variant="outlined"
+          style={{ marginTop:"10px", width: "500px"}}
+          />
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+         
+          <Button onClick={handleClose} style={{width: "500px", height: "30px",padding: "20px", marginRight: "20px"}}>Apply</Button>
+        </DialogActions>
+      </Dialog>
+      <hr/>
+      <Cancellation
+      date='17 jan'
+      />
+        </div>
+        <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button>
+      </div>
+            <PriceDetails
+            image=""
+            hotelNAme=""
+            rating=""
+            price=""
+            day=""
+            total=""
+            taxes=""
+            Alltotal=""
+            />
+
+      </div>
+      
+     <Footer/>
+      </div>
+    </>
+  );
+}
