@@ -4,6 +4,7 @@
     left: 25%;
     width: 100vw;
     overflow-y: scroll;
+    
 }
 
 .search > h2 {
@@ -13,7 +14,7 @@
     width: 559px;
     padding: 0px;
     margin: 10px;
-    background-color: white;
+    /* background-color: white; */
     position: absolute;
     left: 0;
     top: 380px;

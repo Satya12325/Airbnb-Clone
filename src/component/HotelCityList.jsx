@@ -16,6 +16,7 @@ const HotelCityList = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
+    console.log(cityname,"cityname");
     const freecancelationClick = () => {
         dispatch(filterfreecancelation(freecancelations))
      }
