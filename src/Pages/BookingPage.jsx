@@ -163,7 +163,14 @@ export default function Booking() {
         <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button>
       </div>
             <PriceDetails
-            
+            image=""
+            hotelNAme=""
+            rating=""
+            price=""
+            day=""
+            total=""
+            taxes=""
+            Alltotal=""
             />
 
       </div>
