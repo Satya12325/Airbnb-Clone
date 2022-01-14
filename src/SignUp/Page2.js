@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { Checkbox } from "@mui/material";
 
-const style = {
+const styleso = {
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -20,24 +20,25 @@ const style = {
 };
 
 export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
+  const [openo, setOpeno] = React.useState(false);
   const [fname, setFname] = React.useState("");
   const [lname, setLname] = React.useState("");
   const [dobirth, setDobirth] = React.useState("");
   const [email, setEmail] = React.useState("");
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpeno = () => setOpeno(true);
+  const handleCloseo = () => setOpeno(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpeno}>Open modal</Button>
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={openo}
+        onClose={handleCloseo}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={styleso}>
+        <button onClick={handleCloseo} style={{border: "0", background: "transparent"}}>X</button>
           <div>
             <input
               style={{

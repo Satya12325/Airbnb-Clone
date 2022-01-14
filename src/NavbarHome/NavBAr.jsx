@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import style from "./NavBAr.module.css";
+import styles from "./NavBAr.module.css";
 
 import LanguageIcon from "@material-ui/icons/Language";
 
@@ -15,6 +15,9 @@ import CityList from "../NavbarHome/cityList/citylist";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { hotelcity } from "../Redux/action";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import { Checkbox } from "@mui/material";
 
 import SearchIcon from "@material-ui/icons/Search";
 
@@ -51,6 +54,26 @@ const SuggestionBox = styled.div`
   }
 `;
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 500,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+  fontFamily: "sans-serif",
+  maxHeight: "633px",
+  overflowY: "auto",
+  height: "450px",
+  borderRadius: "20px"
+};
+
+
+
+
 function NavBar() {
   const [showSearch, setShowSearch] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -59,8 +82,28 @@ function NavBar() {
   const [isLoading, setLoading] = useState(false);
   const [active, setActive] = useState(0);
   const [value, setValue] = useState("");
+  // for signup
+  const [open, setOpen] = React.useState(false);
+  const [pcode, setPcode] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const handleOpen = () => setOpen(true);
+  const handleCloses = () => setOpen(false);
+
+  // for sign up
+
+  const [openo, setOpeno] = React.useState(false);
+  const [fname, setFname] = React.useState("");
+  const [lname, setLname] = React.useState("");
+  const [dobirth, setDobirth] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const handleOpeno = () => setOpeno(true);
+  const handleCloseo = () => setOpeno(false);
+
+
+
+
   const dispatch = useDispatch();
-  const open = Boolean(anchorEl);
+  const ope = Boolean(anchorEl);
 
   const onClickList = (title) => {
     setSearchText(title);
@@ -92,19 +135,19 @@ function NavBar() {
   console.log(suggestion, active);
 
   return (
-    <div className={style.Navbartop}>
-      <div className={style.header}>
-        {/* <Link to='/'> */}
+    <div className={styles.Navbartop}>
+      <div className={styles.header}>
+        <Link to='/'>
         <img
-          className={style.header__icon}
+          className={styles.header__icon}
           src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           alt=""
         />
-        {/* </Link> */}
+        </Link>
 
-        <div className={style.header__center}>
+        <div className={styles.header__center}>
           <input
-            className={style.inputSearch}
+            className={styles.inputSearch}
             type="text"
             placeholder="Start your search"
           />
@@ -113,7 +156,7 @@ function NavBar() {
 
           <button
             onClick={() => setShowSearch(!showSearch)}
-            className={style.searchButton}
+            className={styles.searchButton}
           >
             {/* {showSearch ? "Hide" : "Search Dates"} */}
             <p>Chack in & out and Add gust </p>
@@ -121,15 +164,15 @@ function NavBar() {
           {/* <SearchIcon /> */}
         </div>
 
-        <div className={style.header__right}>
+        <div className={styles.header__right}>
           <p>Become a host</p>
           <LanguageIcon />
-          <div className={style.MenuUser}>
+          <div className={styles.MenuUser}>
             <Button
               id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
+              aria-controls={ope ? "basic-menu" : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
+              aria-expanded={ope ? "true" : undefined}
               onClick={handleClick}
             >
               <MenuIcon style={{ color: "rgb(104, 101, 101)" }} />
@@ -140,15 +183,19 @@ function NavBar() {
             <Menu
               id="basic-menu"
               anchorEl={anchorEl}
-              open={open}
+              open={ope}
               onClose={handleClose}
               MenuListProps={{
                 "aria-labelledby": "basic-button",
               }}
+              
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}><b onClick={handleOpeno}>Sign Up</b></MenuItem>
+              <MenuItem onClick={handleClose} ><span onClick={handleOpen}>Log in</span></MenuItem>
+              <hr/>
+              <MenuItem onClick={handleClose}>Host your home</MenuItem>
+              <MenuItem onClick={handleClose}>Host an experience</MenuItem>
+              <MenuItem onClick={handleClose}>Help</MenuItem>
             </Menu>
           </div>
         </div>
@@ -166,6 +213,278 @@ function NavBar() {
           ))}
         </SuggestionBox>
       )}
+
+<div>
+
+      
+      <Modal
+        open={open}
+        onClose={handleCloses}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <button onClick={handleCloses} style={{border: "0", background: "transparent", cursor: "pointer"}}>X</button>
+          <h3 style={{ textAlign: "center", fontSize: "16px" }}>
+            Log in or sign up
+          </h3>
+          <hr />
+          <h1 style={{ fontSize: "22px" }}>Welcome to Airbnb</h1>
+          <div>
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderBottom: "none",
+                borderTopLeftRadius: "10px",
+                borderTopRightRadius: "10px",
+                padding: "23px 0px 23px 20px"
+              }}
+              placeholder="Country Code"
+              type="code"
+              value={pcode}
+              onChange={(e) => setPcode(e.target.value)}
+            ></input>
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderBottomLeftRadius: "10px",
+                borderBottomRightRadius: "10px",
+                padding: "23px 0px 23px 20px"
+              }}
+              placeholder="Phone number"
+              type="phoneNo"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            ></input>
+            <p style={{ fontSize: "12px" }}>
+              We'll call or text you to confirm your number. Standard message
+              and data rates apply.{" "}
+              <strong style={{ cursor: "pointer" }}>Privacy Policy</strong>
+            </p>
+          </div>
+          <button
+            style={{
+              cursor: "pointer",
+              background: "rgb(255, 56, 92)",
+              border: "none",
+              width: "100%",
+              textAlign: "center",
+              color: "white",
+              fontSize: "16px",
+              padding: "20px 0px 20px 0px",
+              borderRadius: "10px"
+            }}
+            type="submit"
+          >
+            Continue
+          </button>
+          <div style={{ display: "flex" }}>
+            <hr
+              style={{
+                width: "45%",
+                border: "none",
+                borderTop: "0.1px solid rgb(228, 228, 228)",
+                marginTop: "25px"
+              }}
+            />
+            <p>or</p>
+            <hr
+              style={{
+                width: "45%",
+                border: "none",
+                borderTop: "0.1px solid rgb(228, 228, 228)",
+                marginTop: "25px"
+              }}
+            />
+          </div>
+          <div
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              border: "0.1px solid rgb(118, 118, 118)",
+              margin: "15px 10px",
+              borderRadius: "10px"
+            }}
+          >
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/facebook-new.png"/>
+            <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
+              Continue with Facebook
+            </p>
+          </div>
+          <div
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              border: "0.1px solid rgb(118, 118, 118)",
+              margin: "15px 10px",
+              borderRadius: "10px"
+            }}
+          >
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/google-logo.png"/>
+            <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
+              Continue with Google
+            </p>
+          </div>
+          <div
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              border: "0.1px solid rgb(118, 118, 118)",
+              margin: "15px 10px",
+              borderRadius: "10px"
+            }}
+          >
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/ios-filled/24/000000/mac-os.png"/>
+            <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
+              Continue with Apple
+            </p>
+          </div>
+          <div
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              border: "0.1px solid rgb(118, 118, 118)",
+              margin: "15px 10px",
+              borderRadius: "10px"
+            }}
+          >
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-message-contact-flatart-icons-outline-flatarticons.png"/>
+            <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
+              Continue with email
+            </p>
+          </div>
+        </Box>
+      </Modal>
+    </div>
+
+
+            {/* // sign up pop */}
+
+            <div>
+     
+      <Modal
+        open={openo}
+        onClose={handleCloseo}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+        <button onClick={handleCloseo} style={{border: "0", background: "transparent"}}>X</button>
+          <div>
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderBottom: "none",
+                borderTopLeftRadius: "10px",
+                borderTopRightRadius: "10px",
+                padding: "23px 0px 23px 20px",
+                fontSize: "100%"
+              }}
+              type="firstName"
+              placeholder="First name"
+              value={fname}
+              onChange={(e) => setFname(e.target.value)}
+            />
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderBottomLeftRadius: "10px",
+                borderBottomRightRadius: "10px",
+                padding: "23px 0px 23px 20px",
+                fontSize: "100%"
+              }}
+              type="lastName"
+              placeholder="Last name"
+              value={lname}
+              onChange={(e) => setLname(e.target.value)}
+            ></input>
+            <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
+              Make sure it matches the name on your government ID
+            </p>
+          </div>
+          <div>
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderRadius: "10px",
+                padding: "23px 0px 23px 20px",
+                fontSize: "100%"
+              }}
+              type="number"
+              placeholder="Date of birth"
+              value={dobirth}
+              onChange={(e) => setDobirth(e.target.value)}
+            />
+            <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
+              To sign up, you need to be at least 18. your birthday won't be
+              shared with other people who use Airbnb.
+            </p>
+          </div>
+          <div>
+            <input
+              style={{
+                width: "95%",
+                border: "1px solid rgb(118, 118, 118)",
+                borderRadius: "10px",
+                padding: "23px 0px 23px 20px",
+                fontSize: "100%"
+              }}
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
+              We'll email you trip confirmations and reciepts.
+            </p>
+          </div>
+          <div>
+            <p style={{ fontSize: "12px" }}>
+              By selecting <strong>Agree and continue</strong>, I agree to
+              Airbnb's <a href="#">Terms of Service</a>,{" "}
+              <a href="#">Payments Terms of Service</a>, and{" "}
+              <a href="#">Nondiscrimination Policy</a> and acknowlwdge the{" "}
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+          <button
+            style={{
+              cursor: "pointer",
+              background: "rgb(255, 56, 92)",
+              border: "none",
+              width: "100%",
+              textAlign: "center",
+              color: "white",
+              fontSize: "16px",
+              padding: "20px 0px 20px 0px",
+              borderRadius: "10px"
+            }}
+            type="submit"
+          >
+            Agree and continue
+          </button>
+          <hr style={{ margin: "25px 0px" }} />
+          <div style={{ margin: "10px 0px", fontSize: "12px" }}>
+            Airbnb will send you members-only details, inspiration, marketing
+            emails, and push notifications. You can opt out of receiving these
+            at any time in your account settings or directly from the marketing
+            notification.
+          </div>
+          <div style={{ display: "flex", fontSize: "12px" }}>
+            <Checkbox></Checkbox>
+            <p style={{ marginTop: "15px" }}>
+              I don't want to receive marketing message from Airbnb.
+            </p>
+          </div>
+        </Box>
+      </Modal>
+    </div>
+
     </div>
   );
 }

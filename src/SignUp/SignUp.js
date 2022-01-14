@@ -8,17 +8,19 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 500,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
   fontFamily: "sans-serif",
   maxHeight: "633px",
-  overflowY: "auto"
+  overflowY: "auto",
+  height: "450px",
+  borderRadius: "20px"
 };
 
-export default function BasicModal() {
+export default function SignUp() {
   const [open, setOpen] = React.useState(false);
   const [pcode, setPcode] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -35,6 +37,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <button onClick={handleClose} style={{border: "0", background: "transparent"}}>X</button>
           <h3 style={{ textAlign: "center", fontSize: "16px" }}>
             Log in or sign up
           </h3>
