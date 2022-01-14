@@ -118,6 +118,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+            <img
+                style={{ width: "30px", height: "30px", padding: "7px" }}
+                src="https://img.icons8.com/color/50/000000/facebook-new.png"
+              />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Facebook
             </p>
@@ -131,6 +135,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+            <img
+                style={{ width: "30px", height: "30px", padding: "7px" }}
+                src="https://img.icons8.com/fluency/50/000000/google-logo.png"
+              />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Google
             </p>
@@ -144,6 +152,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+          <img
+            style={{ width: "30px", height: "30px", padding: "7px" }}
+            src="https://visualpharm.com/assets/422/iOS%20Logo-595b40b65ba036ed117d1e56.svg"
+          />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Apple
             </p>
@@ -157,6 +169,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+          <img
+            style={{ width: "30px", height: "30px", padding: "7px" }}
+            src="https://visualpharm.com/assets/793/Email-595b40b65ba036ed117d4006.svg"
+          />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with email
             </p>
