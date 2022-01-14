@@ -20,6 +20,8 @@ const style = {
 
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
+  const [pcode, setPcode] = React.useState("");
+  const [phone, setPhone] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -48,7 +50,10 @@ export default function BasicModal() {
                 borderTopRightRadius: "10px",
                 padding: "23px 0px 23px 20px"
               }}
-              placeholder="Country/Region"
+              placeholder="Country Code"
+              type="code"
+              value={pcode}
+              onChange={(e) => setPcode(e.target.value)}
             ></input>
             <input
               style={{
@@ -59,6 +64,9 @@ export default function BasicModal() {
                 padding: "23px 0px 23px 20px"
               }}
               placeholder="Phone number"
+              type="phoneNo"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             ></input>
             <p style={{ fontSize: "12px" }}>
               We'll call or text you to confirm your number. Standard message
@@ -68,6 +76,7 @@ export default function BasicModal() {
           </div>
           <button
             style={{
+              cursor: "pointer",
               background: "rgb(255, 56, 92)",
               border: "none",
               width: "100%",
@@ -77,6 +86,7 @@ export default function BasicModal() {
               padding: "20px 0px 20px 0px",
               borderRadius: "10px"
             }}
+            type="submit"
           >
             Continue
           </button>
