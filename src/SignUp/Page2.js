@@ -21,6 +21,10 @@ const style = {
 
 export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
+  const [fname, setFname] = React.useState("");
+  const [lname, setLname] = React.useState("");
+  const [dobirth, setDobirth] = React.useState("");
+  const [email, setEmail] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -45,7 +49,10 @@ export default function BasicModal() {
                 padding: "23px 0px 23px 20px",
                 fontSize: "100%"
               }}
+              type="firstName"
               placeholder="First name"
+              value={fname}
+              onChange={(e) => setFname(e.target.value)}
             ></input>
             <input
               style={{
@@ -56,7 +63,10 @@ export default function BasicModal() {
                 padding: "23px 0px 23px 20px",
                 fontSize: "100%"
               }}
+              type="lastName"
               placeholder="Last name"
+              value={lname}
+              onChange={(e) => setLname(e.target.value)}
             ></input>
             <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
               Make sure it matches the name on your government ID
@@ -71,7 +81,10 @@ export default function BasicModal() {
                 padding: "23px 0px 23px 20px",
                 fontSize: "100%"
               }}
+              type="dob"
               placeholder="Date of birth"
+              value={dobirth}
+              onChange={(e) => setDobirth(e.target.value)}
             />
             <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
               To sign up, you need to be at least 18. your birthday won't be
@@ -87,7 +100,10 @@ export default function BasicModal() {
                 padding: "23px 0px 23px 20px",
                 fontSize: "100%"
               }}
+              type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
               We'll email you trip confirmations and reciepts.
@@ -104,6 +120,7 @@ export default function BasicModal() {
           </div>
           <button
             style={{
+              cursor: "pointer",
               background: "rgb(255, 56, 92)",
               border: "none",
               width: "100%",
@@ -113,14 +130,22 @@ export default function BasicModal() {
               padding: "20px 0px 20px 0px",
               borderRadius: "10px"
             }}
+            type="submit"
           >
             Agree and continue
           </button>
-          <hr style={{margin:"25px 0px"}}/>
-          <div style={{ margin: "10px 0px", fontSize:"12px"}}>Airbnb will send you members-only details, inspiration, marketing emails, and push notifications. You can opt out of receiving these at any time in your account settings or directly from the marketing notification.</div>
-          <div style={{display:"flex", fontSize:"12px"}}>
+          <hr style={{ margin: "25px 0px" }} />
+          <div style={{ margin: "10px 0px", fontSize: "12px" }}>
+            Airbnb will send you members-only details, inspiration, marketing
+            emails, and push notifications. You can opt out of receiving these
+            at any time in your account settings or directly from the marketing
+            notification.
+          </div>
+          <div style={{ display: "flex", fontSize: "12px" }}>
             <Checkbox></Checkbox>
-            <p style={{marginTop: "15px"}}>I don't want to receive marketing message from Airbnb.</p> 
+            <p style={{ marginTop: "15px" }}>
+              I don't want to receive marketing message from Airbnb.
+            </p>
           </div>
         </Box>
       </Modal>
