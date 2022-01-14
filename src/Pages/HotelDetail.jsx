@@ -79,7 +79,7 @@ export default function HotelDetail(){
                         </div>
                         </div>
                     </div>
-                    <div style={{display:'flex'}}>
+                    <div style={{display:'flex',justifyContent:'space-between'}}>
                         <div style={{flexBasis:'654px'}}>
                             <h2 style={{fontWeight: '600',fontSize: '22px',lineHheight: '26px', marginBottom:'0'}}>{hotel.Tagline}</h2>
                             <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px',marginBottom:'32px'}}>{`${hotel['Room Avialable']*2} guests · ${hotel['Room Avialable']} bedroom ·  ${hotel['Room Avialable']*1.5} bathrooms`}</p>
@@ -91,6 +91,22 @@ export default function HotelDetail(){
                                 <div style={{display:'flex',marginBottom:'24px'}}><div style={{flexShrink:'0',minWidth:'24px'}}><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display: 'block', height: '24px', width: '24px', fill: 'black'}}><path d="M16 0c6.627 0 12 5.373 12 12 0 6.337-3.814 12.751-11.346 19.257L16 31.82l-1.076-.932C7.671 24.509 4 18.218 4 12 4 5.423 9.397 0 16 0zm0 2C10.504 2 6 6.525 6 12c0 5.44 3.249 11.118 9.831 17.02l.169.149.576-.518c6.178-5.65 9.293-11.092 9.42-16.318L26 12c0-5.523-4.477-10-10-10zm0 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path></svg></div><div style={{marginLeft:'16px'}}><div style={{fontSize:'16px',marginBottom:'4px',fontWeight:'600'}}>Great location</div><div style={{fontWeight: '400',fontSize: '16px',color:'rgb(113,113,113)'}}>100% of recent guests gave the location a 5-star rating.</div></div></div></div>
                             <div>
                             <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px'}}>{hotel.About}</p>
+                            </div>
+                        </div>
+                        <div style={{flexBasis:'340px',border:'1px solid lightgrey',borderRadius:'12px',marginTop:'25px',boxShadow:'rgba(0, 0, 0, 0.20) 0px 5px 15px',padding:'20px 25px'}}>
+                            <div style={{display:'flex',justifyContent:'space-between'}}>
+                                <div>
+                                <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px', marginTop:'0'}}><strong style={{fontSize:'22px'}}>₹{hotel.Price}</strong> / night</p>
+                                </div>
+                                <div style={{display:'flex',flexWrap:'wrap',marginTop:'9px'}}>
+                                    {hotel.Rating && <><span style={{marginRight:'5px',paddingTop:'2px'}}>
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display: "block", height: "14px", width: "14px",fill:"#FF385C"}}>
+                                    <path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fillRule="evenodd"></path></svg>
+                                    </span>
+                                    <span style={{fontSize:'14px',fontWeight:'600'}}>{hotel.Rating}</span></>}
+                                    {hotel.Review && <><span style={{margin:'0 8px'}}>·</span>
+                                    <span style={{fontSize:'14px',fontWeight:'600',textDecoration:'underLine',cursor:'pointer'}}>{hotel.Review} Reviews</span></>}
+                                </div>
                             </div>
                         </div>
                     </div>
