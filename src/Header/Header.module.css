@@ -19,9 +19,9 @@
   
   .header__center {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     align-items: center;
-    max-width: fit-content;
+    width: 210px;
     padding: 10px;
     height: 35px;
     border: 1px solid lightgray;
@@ -39,6 +39,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15vw;
-    margin-right: 80px;
+    width: 260px;
+    margin-right: 20px;
+  }
+  .header__right a{
+    text-decoration: none;
+    color: black;
   }

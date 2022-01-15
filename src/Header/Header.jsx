@@ -7,13 +7,30 @@ import { Avatar } from "@material-ui/core";
 import {Link} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { hotelcity } from '../Redux/action';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Button from "@mui/material/Button";
+import MenuIcon from "@mui/icons-material/Menu";
+
 
 function Header() {
     const [searchText , setSearchText] = useState("");
+    const [anchorEl, setAnchorEl] = React.useState(null);
     const dispatch = useDispatch();
+    const open = Boolean(anchorEl);
     const onClickSearch = () => {
         dispatch(hotelcity(searchText));
     }
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+      const handleClose = () => {
+        setAnchorEl(null);
+      };
+
+
+
     return (
         <div className={style.header}
         
@@ -36,9 +53,35 @@ function Header() {
             
             <div className={style.header__right}>
                <Link to="/host">Become a host</Link>
-                <LanguageIcon />
-                <ExpandMoreIcon />
-                <Avatar />
+               
+          <LanguageIcon />
+          <div className={style.MenuUser}>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
+              <MenuIcon style={{ color: "rgb(104, 101, 101)" }} />
+              <Avatar
+                style={{ height: "30px", width: "30px", marginLeft: "10px" }}
+              />
+            </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <MenuItem onClick={handleClose}>Profile</MenuItem>
+              <MenuItem onClick={handleClose}>My account</MenuItem>
+              <MenuItem onClick={handleClose}>Logout</MenuItem>
+            </Menu>
+          </div>
             </div>
         </div>
     )

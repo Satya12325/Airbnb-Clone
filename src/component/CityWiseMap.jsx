@@ -8,20 +8,18 @@ const CityWiseMap = () => {
     window.addEventListener('scroll',() =>{
         var scrollTop = document.documentElement.scrollTop;
        if(scrollTop >= 1100){
-           console.log("true");
            setHeight(true);
        }
        else{
-           console.log("False",height,"heifjkehkjhkjsd",scrollTop)
            setHeight(false);
        }
     })
     
     return(     
-   <div className="city_map_image" style={ { position: height ? 'absolute' : 'fixed' , marginTop: height ? '1000px' : '20px' } } >
+   <div className="city_map_image" style={ { position: height ? 'absolute' : 'fixed' , marginTop: height ? '1000px' : '-40px' } } >
     
     <div >
-        <iframe 
+        <iframe
         src={`https://maps.google.com/maps?ll=28.5449756,77.1904397&q=${cityname}&z=13&output=embed`}
          frameborder="0" scrolling="no" marginheight="0" >
              </iframe>

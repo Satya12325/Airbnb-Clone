@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15vw;
+    min-width: 20vw;
     margin-right: 80px;
   }
   .header__right a {
@@ -66,7 +66,7 @@
       font-size: 22px;
   }
   .inputSearch{
-      width: 150px;
+      max-width: 150px;
       background-color: transparent;
       height: 55px;
       cursor: pointer;
@@ -83,4 +83,18 @@
   }
   .searchButton:hover{
     background-color: rgb(226, 223, 223);
+  }
+
+  .MenuUser{
+    color: rgb(104, 101, 101);
+    display: flex;
+    border: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  @media screen and (max-width: 1000px) {
+    .header__right > p{
+      display: none
+    }
   }

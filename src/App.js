@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-
 import AllpageRout from './Router/AllpageRout';
-import BasicModal from './SignUp/Page2';
+
+import BookingPage from './Pages/BookingPage';
 function App() {
   
   
@@ -12,6 +12,7 @@ function App() {
      {/* <BasicModal /> */}
       <AllpageRout/>
       
+       {/* <BookingPage /> */}
     </div>
   );
 }
