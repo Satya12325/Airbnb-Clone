@@ -8,11 +8,11 @@ const CityWiseMap = () => {
     window.addEventListener('scroll',() =>{
         var scrollTop = document.documentElement.scrollTop;
        if(scrollTop >= 1100){
-           console.log("true");
+           //console.log("true");
            setHeight(true);
        }
        else{
-           console.log("False",height,"heifjkehkjhkjsd",scrollTop)
+           //console.log("False",height,"heifjkehkjhkjsd",scrollTop)
            setHeight(false);
        }
     })

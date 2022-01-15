@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./NavBAr.module.css";
-
+import Fab from '@mui/material/Fab';
 import LanguageIcon from "@material-ui/icons/Language";
 
 import { Avatar } from "@material-ui/core";
@@ -18,13 +18,12 @@ import { hotelcity } from "../Redux/action";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { Checkbox } from "@mui/material";
-
+import TextField from '@mui/material/TextField';
 import SearchIcon from "@material-ui/icons/Search";
-
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { border } from "@mui/system";
 // import { Link } from "react-router-dom";
 
 const SuggestionBox = styled.div`
@@ -98,7 +97,25 @@ function NavBar() {
   const [email, setEmail] = React.useState("");
   const handleOpeno = () => setOpeno(true);
   const handleCloseo = () => setOpeno(false);
-
+console.log(fname,lname,dobirth,email)
+  const handleTask = ()=>{
+    const payload = {
+      fname: fname,
+      lname: lname,
+      dobirth: dobirth,
+      email: email
+    };
+    const config = {
+      url: "http://localhost:3000/signup",
+      method: "POST",
+      data: payload
+    }
+    setEmail("");
+    setDobirth("");
+    setLname("");
+    setFname("");
+    return axios(config)
+  }
 
 
 
@@ -132,7 +149,7 @@ function NavBar() {
       setSuggestion(out);
     }
   }, [searchText]);
-  console.log(suggestion, active);
+  //console.log(suggestion, active);
 
   return (
     <div className={styles.Navbartop}>
@@ -214,7 +231,7 @@ function NavBar() {
         </SuggestionBox>
       )}
 
-<div>
+      <div>
 
       
       <Modal
@@ -231,33 +248,29 @@ function NavBar() {
           <hr />
           <h1 style={{ fontSize: "22px" }}>Welcome to Airbnb</h1>
           <div>
-            <input
-              style={{
-                width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottom: "none",
-                borderTopLeftRadius: "10px",
-                borderTopRightRadius: "10px",
-                padding: "23px 0px 23px 20px"
-              }}
-              placeholder="Country Code"
+          <TextField id="filled-basic" label="Country Code" variant="filled"
+          style={{
+            width: "95%",
+            
+           borderRadius: "10px"
+          }}
+            
               type="code"
               value={pcode}
               onChange={(e) => setPcode(e.target.value)}
-            ></input>
-            <input
+          />
+            
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottomLeftRadius: "10px",
-                borderBottomRightRadius: "10px",
-                padding: "23px 0px 23px 20px"
+                
               }}
-              placeholder="Phone number"
+              label="Country Code"
+              variant="filled"
               type="phoneNo"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-            ></input>
+            ></TextField>
             <p style={{ fontSize: "12px" }}>
               We'll call or text you to confirm your number. Standard message
               and data rates apply.{" "}
@@ -308,7 +321,7 @@ function NavBar() {
               borderRadius: "10px"
             }}
           >
-            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/facebook-new.png"/>
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/facebook-new.png" alt="" />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Facebook
             </p>
@@ -322,7 +335,7 @@ function NavBar() {
               borderRadius: "10px"
             }}
           >
-            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/google-logo.png"/>
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/fluency/24/000000/google-logo.png" alt="" />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Google
             </p>
@@ -336,7 +349,7 @@ function NavBar() {
               borderRadius: "10px"
             }}
           >
-            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/ios-filled/24/000000/mac-os.png"/>
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/ios-filled/24/000000/mac-os.png" alt=""/>
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Apple
             </p>
@@ -350,14 +363,14 @@ function NavBar() {
               borderRadius: "10px"
             }}
           >
-            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-message-contact-flatart-icons-outline-flatarticons.png"/>
+            <img style={{height:"24px", margin: "10px"}} src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-message-contact-flatart-icons-outline-flatarticons.png" alt="" />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with email
             </p>
           </div>
         </Box>
       </Modal>
-    </div>
+      </div>
 
 
             {/* // sign up pop */}
@@ -371,52 +384,46 @@ function NavBar() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-        <button onClick={handleCloseo} style={{border: "0", background: "transparent"}}>X</button>
+        <button onClick={handleCloseo} style={{border: "0", background: "transparent", marginBottom: "20px", fontSize: "20px"}}>X</button>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottom: "none",
-                borderTopLeftRadius: "10px",
-                borderTopRightRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
+              variant="filled"
               type="firstName"
-              placeholder="First name"
+              label="First name"
               value={fname}
               onChange={(e) => setFname(e.target.value)}
             />
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottomLeftRadius: "10px",
-                borderBottomRightRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
-              type="lastName"
-              placeholder="Last name"
+              type="text"
+              variant="filled"
+              label="Last name"
               value={lname}
               onChange={(e) => setLname(e.target.value)}
-            ></input>
+            ></TextField>
             <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
               Make sure it matches the name on your government ID
             </p>
           </div>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
+              variant="filled"
               type="number"
-              placeholder="Date of birth"
+              label="Age"
               value={dobirth}
               onChange={(e) => setDobirth(e.target.value)}
             />
@@ -426,16 +433,15 @@ function NavBar() {
             </p>
           </div>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
+              variant="filled"
               type="email"
-              placeholder="Email"
+              label="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -464,9 +470,11 @@ function NavBar() {
               padding: "20px 0px 20px 0px",
               borderRadius: "10px"
             }}
-            type="submit"
+            
+            onClick={handleTask}
           >
-            Agree and continue
+            <b onClick={handleCloseo}>Agree and continue</b>
+            
           </button>
           <hr style={{ margin: "25px 0px" }} />
           <div style={{ margin: "10px 0px", fontSize: "12px" }}>
@@ -484,7 +492,16 @@ function NavBar() {
         </Box>
       </Modal>
     </div>
-
+            <div className={styles.smallBg}>
+              <input type="text"
+              style={{width:"80%", height:"50px",borderRadius:"30px", border:"2px solid lightgray"}}
+              />
+              <Fab aria-label="add" style={{background:"#E51D54", }} >
+                <SearchIcon
+                style={{color:"white", fontSize:"30px"}}
+                />
+              </Fab>
+            </div>
     </div>
   );
 }
