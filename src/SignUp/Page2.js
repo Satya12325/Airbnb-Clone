@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { Checkbox } from "@mui/material";
-
-const styleso = {
+import TextField from '@mui/material/TextField';
+const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -19,7 +19,7 @@ const styleso = {
   overflowY: "auto"
 };
 
-export default function BasicModal() {
+export default function SignUp(onTask) {
   const [openo, setOpeno] = React.useState(false);
   const [fname, setFname] = React.useState("");
   const [lname, setLname] = React.useState("");
@@ -27,63 +27,59 @@ export default function BasicModal() {
   const [email, setEmail] = React.useState("");
   const handleOpeno = () => setOpeno(true);
   const handleCloseo = () => setOpeno(false);
-
+  const handleTask = (e) => {
+    e.preventDefault();
+    onTask(fname,lname,dobirth,email)
+  }
   return (
     <div>
-      <Button onClick={handleOpeno}>Open modal</Button>
       <Modal
         open={openo}
         onClose={handleCloseo}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={styleso}>
-        <button onClick={handleCloseo} style={{border: "0", background: "transparent"}}>X</button>
+        <Box sx={style}>
+        <button onClick={handleCloseo} style={{border: "0", background: "transparent", marginBottom: "20px", fontSize: "20px"}}>X</button>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottom: "none",
-                borderTopLeftRadius: "10px",
-                borderTopRightRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
+              variant="filled"
               type="firstName"
-              placeholder="First name"
+              label="First name"
               value={fname}
               onChange={(e) => setFname(e.target.value)}
-            ></input>
-            <input
+            />
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderBottomLeftRadius: "10px",
-                borderBottomRightRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
-              type="lastName"
-              placeholder="Last name"
+              type="text"
+              variant="filled"
+              label="Last name"
               value={lname}
               onChange={(e) => setLname(e.target.value)}
-            ></input>
+            ></TextField>
             <p style={{ fontSize: "12px", color: "rgb(118,118,118)" }}>
               Make sure it matches the name on your government ID
             </p>
           </div>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
-              type="dob"
-              placeholder="Date of birth"
+              variant="filled"
+              type="number"
+              label="Age"
               value={dobirth}
               onChange={(e) => setDobirth(e.target.value)}
             />
@@ -93,16 +89,15 @@ export default function BasicModal() {
             </p>
           </div>
           <div>
-            <input
+            <TextField
               style={{
                 width: "95%",
-                border: "1px solid rgb(118, 118, 118)",
-                borderRadius: "10px",
-                padding: "23px 0px 23px 20px",
+                
                 fontSize: "100%"
               }}
+              variant="filled"
               type="email"
-              placeholder="Email"
+              label="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -132,6 +127,7 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
             type="submit"
+            onClick={handleTask}
           >
             Agree and continue
           </button>
