@@ -182,7 +182,7 @@ console.log(fname,lname,dobirth,email)
         </div>
 
         <div className={styles.header__right}>
-          <p>Become a host</p>
+        <Link to="/host"><p>Become a host</p></Link>
           <LanguageIcon />
           <div className={styles.MenuUser}>
             <Button
