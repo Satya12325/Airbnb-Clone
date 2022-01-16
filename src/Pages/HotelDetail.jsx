@@ -1,27 +1,36 @@
+import React from "react"
+import { TextField , Box, Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DateRangePicker from '@mui/lab/DateRangePicker';
 import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import style from './HotelDetail.module.css';
 import div from '../div.JPG'
 import Footer from "../Footer/Footer";
+import addWeeks from 'date-fns/addWeeks';
+import NavBar from "../NavbarHome/NavBAr";
+import CalculatPrice from "../Components/CalculatPrice";
+import format from "date-fns/format"
+import {useHistory} from "react-router-dom"
 export default function HotelDetail(){
     const {id}= useParams()
     const [hotel,setHotel]= useState(null)
     const [isLoding, setIsLoading] = useState(true);
-
+    const [value, setValue] = React.useState([null, null]);
+     const [guest , setGuest] = useState(1);
+     const [days , setDays] = useState(1);
     const fetchData = () => {
         return axios.get('http://localhost:3000/Available/'+1)
     }
-    console.log(id,"id");
     const handleFetch = async () => {
         try {
             setIsLoading(true);
             const {data} = await fetchData();
-            console.log(data)
             setHotel(data)
-            setIsLoading(false);
-            
+            setIsLoading(false);  
         }
         catch (error) {
             console.error(error);
@@ -32,12 +41,21 @@ export default function HotelDetail(){
         handleFetch();
     },[]);
 
-    console.log(div)
+    function getWeeksAfter(date, amount) {
+        return date ? addWeeks(date, amount) : undefined;
+      }
 
+    const handleChangelGuests = (e) => {
+        setGuest(e.target.value)
+    }
+   const history = useHistory();
+    const onNextPageBooking = () => {
+       history.push('/booking');
+    }
 
     return(
         <>
-        <Header/>
+        <NavBar />
         {isLoding?
         <div style={{marginTop:'150px'}}>Loading...</div>:
         <div>
@@ -83,7 +101,7 @@ export default function HotelDetail(){
                     <div style={{display:'flex',justifyContent:'space-between'}}>
                         <div style={{flexBasis:'654px'}}>
                             <h2 style={{fontWeight: '600',fontSize: '22px',lineHheight: '26px', marginBottom:'0'}}>{hotel.Tagline}</h2>
-                            <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px',marginBottom:'32px'}}>{`${hotel['Room Avialable']*2} guests · ${hotel['Room Avialable']} bedroom ·  ${hotel['Room Avialable']*1.5} bathrooms`}</p>
+                            <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px',marginBottom:'32px'}}>{`${hotel['Room Avialable']*2} guests · ${hotel['Room Avialable']} bedroom ·  ${hotel['Room Avialable']*1} bathrooms`}</p>
                             <div style={{paddingTop: '32px', paddingBottom: '26px',borderTop:'1px solid lightgrey',borderBottom:'1px solid lightgrey',marginBottom:'32px'}}>
                                 <div style={{display:'flex',marginBottom:'24px'}}><div style={{flexShrink:'0',minWidth:'24px'}}><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display: 'block', height: '24px', width: '24px', fill: 'black'}}>
                                     <path d="M15.032 1.747c.263-1.004 1.692-.993 1.94.015.876 3.577 2.415 6.454 4.614 8.652 2.198 2.199 5.075 3.738 8.652 4.615 1.016.249 1.016 1.693 0 1.942-3.577.877-6.454 2.416-8.652 4.615-2.199 2.198-3.738 5.075-4.615 8.652-.249 1.016-1.693 1.016-1.942 0-.877-3.577-2.416-6.454-4.615-8.652-2.198-2.199-5.075-3.738-8.652-4.615-1.008-.247-1.019-1.676-.015-1.939 3.535-.923 6.394-2.487 8.597-4.69 2.202-2.202 3.765-5.06 4.688-8.595zm.945 3.518l-.133.325c-.88 2.085-2.025 3.914-3.438 5.484l-.33.357-.318.326c-1.6 1.6-3.5 2.893-5.693 3.88l-.475.206-.325.133.352.14c2.108.859 3.952 1.995 5.527 3.407l.358.33.326.319c1.603 1.602 2.887 3.515 3.854 5.732l.203.48.115.291.115-.292c.86-2.108 1.996-3.952 3.408-5.527l.33-.358.319-.326c1.602-1.603 3.515-2.887 5.732-3.854l.48-.203.292-.115-.293-.115c-2.421-.988-4.494-2.34-6.211-4.057-1.603-1.602-2.887-3.515-3.854-5.732l-.203-.48-.138-.351zm11.04-3.891c.13-.502.845-.497.969.007.176.718.48 1.287.913 1.72.433.433 1.002.737 1.72.913.508.125.508.847 0 .972-.718.176-1.287.48-1.72.913-.433.433-.737 1.002-.913 1.72-.125.508-.847.508-.972 0-.176-.718-.48-1.287-.913-1.72-.433-.433-1.002-.737-1.72-.913-.504-.124-.51-.839-.007-.97.71-.185 1.277-.496 1.712-.93.434-.435.745-1.002.93-1.712z"></path></svg></div>
@@ -107,7 +125,65 @@ export default function HotelDetail(){
                                     <span style={{fontSize:'14px',fontWeight:'600'}}>{hotel.Rating}</span></>}
                                     {hotel.Review && <><span style={{margin:'0 8px'}}>·</span>
                                     <span style={{fontSize:'14px',fontWeight:'600',textDecoration:'underLine',cursor:'pointer'}}>{hotel.Review} Reviews</span></>}
+                                    
                                 </div>
+                                
+                            </div>
+                          <div>
+                          <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                    <DateRangePicker
+                                        disablePast
+                                        value={value}
+                                        maxDate={getWeeksAfter(value[0], 4)}
+                                        onChange={(newValue) => {
+                                        setValue(newValue);
+                                        }}
+                                        renderInput={(startProps, endProps) => (
+                                        <React.Fragment>
+                                            <TextField {...startProps} />
+                                            <Box sx={{ mx: 2 }}> to </Box>
+                                            <TextField {...endProps} />
+                                        </React.Fragment>
+                                        )}
+                                    />
+                                    </LocalizationProvider>
+                          </div>
+                          <div style={{marginTop:"10px"}}>
+                              <FormControl style={{width:"350px"}}>
+
+                              <InputLabel>guest</InputLabel>
+                          <Select
+                                labelId="demo-simple-select-label"
+                                label="Guests"
+                                value={guest}
+                                onChange={handleChangelGuests}
+                                >
+                                <MenuItem value={1}>1</MenuItem>
+                                <MenuItem value={2}>2</MenuItem>
+                                <MenuItem value={3}>3</MenuItem>
+                                <MenuItem value={4}>4</MenuItem>
+                            </Select>
+                                </FormControl>
+                          </div>
+                          <div>
+                              <button style={{width:'350px',borderRadius:"10px",
+                              border:"none",height:"40px",background:"#e61f4d",marginTop:"20px",color:"white",fontSize:"24px"}}
+                              onClick={() => onNextPageBooking()}
+                              >Reserve</button>
+                          </div>
+                            <p style={{textAlign:"center"}}>You won't be charged yet</p>
+                            <div style={{display:"flex"}}>
+                            <h3>₹{hotel.Price + guest*300} X {days}</h3>
+                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{(hotel.Price + guest * 300) * days} </h3>
+                            </div>
+                            
+                            <div style={{display:"flex"}}>
+                            <h3>Service Fee</h3>
+                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{hotel.Tax} </h3>
+                            </div>
+                            <div style={{display:"flex"}}>
+                            <h3>Total before taxes</h3>
+                              <h3 style={{textAlign:"right",marginLeft:"130px"}}>₹{hotel.Tax + (hotel.Price + guest * 300) * days} </h3>
                             </div>
                         </div>
                     </div>

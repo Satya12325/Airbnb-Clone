@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import "./cityWise.css";
 import {useState, useEffect} from "react"
+import {  useHistory } from "react-router-dom";
 const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
@@ -18,7 +19,7 @@ const ListOfCityHotel = () => {
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
     const [changeImage , setImage] = useState(1);
-
+    let history = useHistory();
     const handleFetch = async () => {
         try {
             setIsLoading(true);
@@ -54,6 +55,10 @@ const ListOfCityHotel = () => {
         }
     }
   
+     const onPaymentPage = (id) => {
+         alert("id");
+        history.push(`/hotels/:${id}`)
+     }
 
     return (
         <>
@@ -90,9 +95,9 @@ const ListOfCityHotel = () => {
               item.Facility["Free parkink"] == FreeParking : true
          ) 
          .map((item) => (
-             <div key={item.id} >
+             <div key={item.id} onClick={() => onPaymentPage(item.id)}>
                 <hr />
-                <div className="Hotel_detalis">
+                <div className="Hotel_detalis" >
                 <div>
                  { changeImage == 1 && (<img src={item.Image1}  className="image" alt=""
                   onClick={() => onClickImage(item.id)}
