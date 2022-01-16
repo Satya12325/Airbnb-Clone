@@ -14,7 +14,7 @@ export default function AllpageRout(){
             <Route exact path="/hotels">
                     <HotelCityList/>
                 </Route>
-            <Route exact path='/hotels/:id'>
+            <Route exact path='/hotels/:1'>
                 <HotelDetail/>
             </Route>
                 <Route exact path="/host" >

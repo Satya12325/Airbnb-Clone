@@ -11,9 +11,9 @@ export default function HotelDetail(){
     const [isLoding, setIsLoading] = useState(true);
 
     const fetchData = () => {
-        return axios.get('http://localhost:3000/Available/'+id)
+        return axios.get('http://localhost:3000/Available/'+1)
     }
-
+    console.log(id,"id");
     const handleFetch = async () => {
         try {
             setIsLoading(true);
@@ -38,7 +38,8 @@ export default function HotelDetail(){
     return(
         <>
         <Header/>
-        {isLoding?<div style={{marginTop:'150px'}}>Loading...</div>:
+        {isLoding?
+        <div style={{marginTop:'150px'}}>Loading...</div>:
         <div>
             <div className={style.titleDiv}>
                 <div style={{maxWidth:'1120px',padding:'10px 0',margin:'0 auto'}}>

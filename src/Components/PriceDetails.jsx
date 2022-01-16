@@ -25,15 +25,15 @@ return (
         <hr />
         <h2 style={{ fontWeight: "600" }}>Price details</h2>
         <div>
-            <div style={{ display: "flex", justifyContent: "space-between",margin: "5px 0"}}>
+            <div style={{ display: "flex", justifyContent: "space-between",marginTop:"0px",marginBottom:"0px",height:"50px"}}>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>900 {price} X {day} night</h5>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>₹ 900{total}</h5>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between"}}>
+          <div style={{ display: "flex", justifyContent: "space-between",marginTop:"0px",marginBottom:"0px",height:"50px"}}>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}><u>Service fee</u></h5>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>₹ 150{taxes}</h5>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between",marginTop:"0px",marginBottom:"0px",height:"50px" }}>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>Total<u>(INR)</u></h5>
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>₹ 1050{Alltotal}</h5>
           </div>

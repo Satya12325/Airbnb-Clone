@@ -17,7 +17,7 @@ const ListOfCityHotel = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
-   
+    const [changeImage , setImage] = useState(1);
 
     const handleFetch = async () => {
         try {
@@ -44,6 +44,16 @@ const ListOfCityHotel = () => {
         </div>)
     }
 
+    const onClickImage = (id) => {
+        console.log("onclick");
+        if(changeImage === 3){
+            setImage(1);
+        }
+        else if(changeImage >= 1){
+            setImage(changeImage+1);
+        }
+    }
+  
 
     return (
         <>
@@ -84,7 +94,15 @@ const ListOfCityHotel = () => {
                 <hr />
                 <div className="Hotel_detalis">
                 <div>
-                 <img src={item.Image1} className="image" alt="" />
+                 { changeImage == 1 && (<img src={item.Image1}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
+                 {changeImage === 2 &&  (<img src={item.Image2}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
+                 {changeImage === 3 &&  (<img src={item.Image3}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
                  </div>
                  <div className="second_box_detalis">
                   <p>Private room in {item.cityname}</p>   

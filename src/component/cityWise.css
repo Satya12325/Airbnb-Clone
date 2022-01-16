@@ -11,6 +11,9 @@
 .second_box_detalis{
     margin-left: 12px;
 }
+.price_city_wise{
+    margin-top: 120px;
+}
 .image{
   width: 250px;
  height: 200px; 
@@ -28,8 +31,8 @@
    
 }
 .city_map_image div iframe{
-    width: 600px;
-    height: 560px;
+    width: 630px;
+    height: 600px;
     margin-left: 20px;
 }
 .fillter_box_btn{

@@ -1,5 +1,12 @@
 import { appComponet } from "./actionType"
 
+export const loginauth = (payload) => {
+    return {
+        type : appComponet.AUTH_LOGIN,
+        payload
+    }
+}
+
 export const hotelcity = (payload) => {
     return {
         type : appComponet.HOTEL_CITY,

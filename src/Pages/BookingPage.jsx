@@ -25,7 +25,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 
-export default function Booking() {
+export default function BookingPage() {
 
     const [open, setOpen] = React.useState(false);
 
