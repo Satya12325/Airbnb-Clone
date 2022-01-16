@@ -18,7 +18,7 @@ import TextField from '@mui/material/TextField';
 import Cancellation from '../Components/CanceLation'
 import PriceDetails from '../Components/PriceDetails'
 import Footer from "../Footer/Footer";
-
+import {Link} from "react-router-dom"
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -44,11 +44,11 @@ export default function Booking() {
       <>
     <div>
       <div className={style.BookingNav}>
-        <img
+        <Link to="/"><img
           style={{ height: "80px", paddingLeft: "20px", width: "120px" }}
           src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           alt=""
-        />
+        /></Link>
       </div>
     <div style={{display: "flex",}}>
       <div className={style.mainBook}>
