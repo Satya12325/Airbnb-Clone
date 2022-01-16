@@ -7,6 +7,9 @@ import {  useHistory } from "react-router-dom";
 const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
+
+
+
 const ListOfCityHotel = () => {
      const [data, setData] = useState([]);
     const [isLoding, setIsLoading] = useState(true);
@@ -37,6 +40,8 @@ const ListOfCityHotel = () => {
         handleFetch();
     },[]);
 
+
+    
     if(isLoding) {
         return (<div className="flex">
         <div className ="spinner">

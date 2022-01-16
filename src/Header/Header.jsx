@@ -82,7 +82,7 @@ function Header() {
               <hr/>
               <MenuItem onClick={handleClose}>Host your home</MenuItem>
               <MenuItem onClick={handleClose}>Host an experience</MenuItem>
-              <MenuItem onClick={handleClose}>Help</MenuItem>
+              <Link to="/booking"><MenuItem onClick={handleClose}>Help</MenuItem></Link>
             </Menu>
           </div>
             </div>

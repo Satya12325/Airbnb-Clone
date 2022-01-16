@@ -72,6 +72,7 @@ function Home() {
             </div>
             </div>
             <div>
+                
             <h1 style={{fontWeight:"600",padding: "30px"}}>Discover Airbnb Experiences</h1>
             <div className={style.home__section}>
                 <SmallBanner
