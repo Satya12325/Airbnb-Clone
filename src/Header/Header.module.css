@@ -49,9 +49,12 @@
   .MenuUser{
     color: rgb(104, 101, 101);
     display: flex;
-    border: 2px solid rgb(219, 216, 216);
+    border: 1px solid rgb(219, 216, 216);
     cursor: pointer;
     padding: 1px;
     border-radius: 30px;
     background: white;
+  }
+  .MenuUser:hover{
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
   }

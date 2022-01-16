@@ -2,10 +2,16 @@ import React from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import "./cityWise.css";
-import {useState, useEffect} from "react"
+import {useState, useEffect} from "react";
+
+
+
 const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
+
+
+
 const ListOfCityHotel = () => {
      const [data, setData] = useState([]);
     const [isLoding, setIsLoading] = useState(true);
@@ -36,6 +42,8 @@ const ListOfCityHotel = () => {
         handleFetch();
     },[]);
 
+
+    
     if(isLoding) {
         return (<div className="flex">
         <div className ="spinner">
