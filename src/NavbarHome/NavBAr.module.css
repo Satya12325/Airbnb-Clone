@@ -88,13 +88,26 @@
   .MenuUser{
     color: rgb(104, 101, 101);
     display: flex;
-    border: 1px solid rgb(211, 211, 211);
+    border: 2px solid white;
     cursor: pointer;
     padding: 10px;
     border-radius: 30px;
   }
+
+  .smallBg{
+    max-width: 400px;
+    margin:  auto;
+    display:none;
+    
+  }
   @media screen and (max-width: 1000px) {
     .header__right > p{
       display: none
+    }
+    .smallBg{
+      display: block
+    }
+    .header{
+      display: none;
     }
   }

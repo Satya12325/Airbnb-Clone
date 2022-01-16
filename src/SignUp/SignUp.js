@@ -8,17 +8,19 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "70%",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
   fontFamily: "sans-serif",
   maxHeight: "633px",
-  overflowY: "auto"
+  overflowY: "auto",
+  height: "450px",
+  borderRadius: "20px"
 };
 
-export default function BasicModal() {
+export default function SignUp() {
   const [open, setOpen] = React.useState(false);
   const [pcode, setPcode] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -35,6 +37,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <button onClick={handleClose} style={{border: "0", background: "transparent"}}>X</button>
           <h3 style={{ textAlign: "center", fontSize: "16px" }}>
             Log in or sign up
           </h3>
@@ -118,6 +121,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+            <img
+                style={{ width: "30px", height: "30px", padding: "7px" }}
+                src="https://img.icons8.com/color/50/000000/facebook-new.png"
+              />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Facebook
             </p>
@@ -131,6 +138,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+            <img
+                style={{ width: "30px", height: "30px", padding: "7px" }}
+                src="https://img.icons8.com/fluency/50/000000/google-logo.png"
+              />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Google
             </p>
@@ -144,6 +155,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+          <img
+            style={{ width: "30px", height: "30px", padding: "7px" }}
+            src="https://visualpharm.com/assets/422/iOS%20Logo-595b40b65ba036ed117d1e56.svg"
+          />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with Apple
             </p>
@@ -157,6 +172,10 @@ export default function BasicModal() {
               borderRadius: "10px"
             }}
           >
+          <img
+            style={{ width: "30px", height: "30px", padding: "7px" }}
+            src="https://visualpharm.com/assets/793/Email-595b40b65ba036ed117d4006.svg"
+          />
             <p style={{ textAlign: "center", fontSize: "14px", width: "100%" }}>
               Continue with email
             </p>

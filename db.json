@@ -1675,7 +1675,6 @@
       },
       "Tax": 123
     },
-    
     {
       "id": 215,
       "state": "Hyderabad",
@@ -2050,6 +2049,15 @@
       },
       "Tax": 154,
       "id": 313
+    }
+  ],
+  "signup": [
+    {
+      "fname": "Prajwal",
+      "lname": "Goyal",
+      "dobirth": "0799965860",
+      "email": "prajwal_pw1_045@masai.scholl",
+      "id": 7
     }
   ]
 }

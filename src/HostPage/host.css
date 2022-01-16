@@ -11,7 +11,8 @@
     text-align: center;
 }
 .left_box{
-    background-color: #B02486;
+    background: rgb(211,38,119);
+background: linear-gradient(180deg, rgba(211,38,119,1) 5%, rgba(211,38,119,1) 14%, rgba(67,28,160,1) 81%, rgba(67,28,160,1) 99%);
     width: 50%;
     height: 700px;
     color: white;

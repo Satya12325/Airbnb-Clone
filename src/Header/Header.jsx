@@ -77,9 +77,12 @@ function Header() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}><b>Sign Up</b></MenuItem>
+              <MenuItem onClick={handleClose}>Log in</MenuItem>
+              <hr/>
+              <MenuItem onClick={handleClose}>Host your home</MenuItem>
+              <MenuItem onClick={handleClose}>Host an experience</MenuItem>
+              <MenuItem onClick={handleClose}>Help</MenuItem>
             </Menu>
           </div>
             </div>

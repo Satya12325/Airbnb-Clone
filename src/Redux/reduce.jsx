@@ -8,11 +8,18 @@ const initState = {
     Aircondition : false,
     WashingMachine : false,
     Pool : false,
-    FreeParking : false
+    FreeParking : false,
+    authlogin : false
 }
 
 export const reduce = (state  = initState , {payload , type}  ) => {
     switch(type){
+        case appComponet.AUTH_LOGIN : {
+            return {
+                ...state,
+                authlogin : payload
+            }
+        }
         case appComponet.HOTEL_CITY : {
             return {
                 ...state,
