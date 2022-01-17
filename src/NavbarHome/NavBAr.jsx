@@ -234,7 +234,7 @@ function NavBar() {
             className={styles.searchButton}
           >
             {/* {showSearch ? "Hide" : "Search Dates"} */}
-            <p>Chack in & out and Add gust </p>
+            <p>Check in & Check out and Add gust </p>
           </button>
           {/* <SearchIcon /> */}
         </div>

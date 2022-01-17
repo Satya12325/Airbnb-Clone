@@ -1,5 +1,23 @@
 import { appComponet } from "./actionType"
 
+export const nightstay = (payload) => {
+    return{
+        type : appComponet.NIGHT_STAY,
+        payload
+    }
+}
+export const  guests = (payload) => {
+    return {
+        type : appComponet.GUEST,
+        payload
+    }
+}
+export const id = (payload) => {
+    return{
+        type : appComponet.ID,
+        payload
+    }
+}
 export const loginauth = (payload) => {
     return {
         type : appComponet.AUTH_LOGIN,

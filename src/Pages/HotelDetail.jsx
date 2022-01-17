@@ -15,15 +15,30 @@ import NavBar from "../NavbarHome/NavBAr";
 import CalculatPrice from "../Components/CalculatPrice";
 import format from "date-fns/format"
 import {useHistory} from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+import { guests, nightstay } from "../Redux/action";
 export default function HotelDetail(){
-    const {id}= useParams()
+    const id = useSelector((state) => state.id);
     const [hotel,setHotel]= useState(null)
     const [isLoding, setIsLoading] = useState(true);
     const [value, setValue] = React.useState([null, null]);
      const [guest , setGuest] = useState(1);
      const [days , setDays] = useState(1);
+     const dispatch = useDispatch();
+      const night = useSelector((state) => state.night);
+      console.log(night);
+        useEffect(() => {
+            if(value[0] != null){
+                var day=Math.ceil(Math.abs(value[0]?.getTime()-value[1]?.getTime())/(24*60*60*1000));
+              
+                dispatch(nightstay(day));
+            }
+
+        },[value])
+        
+
     const fetchData = () => {
-        return axios.get('http://localhost:3000/Available/'+1)
+        return axios.get(`http://localhost:3000/Available/${id}`)
     }
     const handleFetch = async () => {
         try {
@@ -50,6 +65,8 @@ export default function HotelDetail(){
     }
    const history = useHistory();
     const onNextPageBooking = () => {
+        // dispatch(id(id))
+        dispatch(guests(guest));
        history.push('/booking');
     }
 
@@ -173,8 +190,8 @@ export default function HotelDetail(){
                           </div>
                             <p style={{textAlign:"center"}}>You won't be charged yet</p>
                             <div style={{display:"flex"}}>
-                            <h3>₹{hotel.Price + guest*300} X {days}</h3>
-                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{(hotel.Price + guest * 300) * days} </h3>
+                            <h3>₹{hotel.Price} X {night}</h3>
+                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{(hotel.Price ) * (night)} </h3>
                             </div>
                             
                             <div style={{display:"flex"}}>
@@ -183,7 +200,7 @@ export default function HotelDetail(){
                             </div>
                             <div style={{display:"flex"}}>
                             <h3>Total before taxes</h3>
-                              <h3 style={{textAlign:"right",marginLeft:"130px"}}>₹{hotel.Tax + (hotel.Price + guest * 300) * days} </h3>
+                              <h3 style={{textAlign:"right",marginLeft:"130px"}}>₹{hotel.Tax + (hotel.Price * night + guest * 300 - 300) * days} </h3>
                             </div>
                         </div>
                     </div>
