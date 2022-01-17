@@ -1,11 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import "./cityWise.css";
 import {useState, useEffect} from "react"
+import {  useHistory } from "react-router-dom";
+import { id } from "../Redux/action";
 const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
+
+
+
 const ListOfCityHotel = () => {
      const [data, setData] = useState([]);
     const [isLoding, setIsLoading] = useState(true);
@@ -17,8 +22,9 @@ const ListOfCityHotel = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
-   
-
+    const [changeImage , setImage] = useState(1);
+    let history = useHistory();
+    const dispatch = useDispatch();
     const handleFetch = async () => {
         try {
             setIsLoading(true);
@@ -36,6 +42,8 @@ const ListOfCityHotel = () => {
         handleFetch();
     },[]);
 
+
+    
     if(isLoding) {
         return (<div className="flex">
         <div className ="spinner">
@@ -44,6 +52,21 @@ const ListOfCityHotel = () => {
         </div>)
     }
 
+    const onClickImage = (id) => {
+        console.log("onclick");
+        if(changeImage === 3){
+            setImage(1);
+        }
+        else if(changeImage >= 1){
+            setImage(changeImage+1);
+        }
+    }
+  
+     const onPaymentPage = (ids) => {
+         console.log(ids,"ids");
+         dispatch(id(ids))
+        history.push(`/hotels/:${ids}`)
+     }
 
     return (
         <>
@@ -80,11 +103,19 @@ const ListOfCityHotel = () => {
               item.Facility["Free parkink"] == FreeParking : true
          ) 
          .map((item) => (
-             <div key={item.id} >
+             <div key={item.id} onClick={() => onPaymentPage(item.id)}>
                 <hr />
-                <div className="Hotel_detalis">
+                <div className="Hotel_detalis" >
                 <div>
-                 <img src={item.Image1} className="image" alt="" />
+                 { changeImage == 1 && (<img src={item.Image1}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
+                 {changeImage === 2 &&  (<img src={item.Image2}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
+                 {changeImage === 3 &&  (<img src={item.Image3}  className="image" alt=""
+                  onClick={() => onClickImage(item.id)}
+                 />)}
                  </div>
                  <div className="second_box_detalis">
                   <p>Private room in {item.cityname}</p>   

@@ -1,4 +1,4 @@
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, useParams} from 'react-router-dom';
 import Home from '../Pages/Home';
 import HotelCityList from '../component/HotelCityList'
 import HotelDetail from '../Pages/HotelDetail';
@@ -6,6 +6,8 @@ import FillHost from '../HostPage/FillHost.jsx';
 import SignUp from '../SignUp/SignUp';
 import Booking from "../Pages/BookingPage"
 export default function AllpageRout(){
+    const {id}= useParams();
+    
     return (
         <Switch>
             <Route exact path="/">

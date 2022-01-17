@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import CityList from "../NavbarHome/cityList/citylist";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { hotelcity } from "../Redux/action";
+import { hotelcity, loginauth } from "../Redux/action";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { Checkbox } from "@mui/material";
@@ -70,6 +70,31 @@ const style = {
   borderRadius: "20px"
 };
 
+const PostData = (fname,lname,dobirth,email) => {
+  console.log(fname,lname,dobirth,email)
+  const payload = {
+    fname: fname,
+    lname: lname,
+    dobirth: dobirth,
+    email: email
+  };
+  const config = {
+    url: "http://localhost:3000/signup",
+    method: "POST",
+    data: payload
+  }
+  return axios(config)
+}
+
+const FetchDataRequest = () => {
+  const config = {
+    url: "http://localhost:3000/signup",
+    method: "get",
+  }
+  return axios(config);
+}
+
+
 
 
 
@@ -85,6 +110,7 @@ function NavBar() {
   const [open, setOpen] = React.useState(false);
   const [pcode, setPcode] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [count , setCount] = useState(0);
   const handleOpen = () => setOpen(true);
   const handleCloses = () => setOpen(false);
 
@@ -95,32 +121,63 @@ function NavBar() {
   const [lname, setLname] = React.useState("");
   const [dobirth, setDobirth] = React.useState("");
   const [email, setEmail] = React.useState("");
-  const handleOpeno = () => setOpeno(true);
-  const handleCloseo = () => setOpeno(false);
-console.log(fname,lname,dobirth,email)
-  const handleTask = ()=>{
-    const payload = {
-      fname: fname,
-      lname: lname,
-      dobirth: dobirth,
-      email: email
-    };
-    const config = {
-      url: "http://localhost:3000/signup",
-      method: "POST",
-      data: payload
-    }
-    setEmail("");
-    setDobirth("");
-    setLname("");
-    setFname("");
-    return axios(config)
-  }
-
-
-
+  
   const dispatch = useDispatch();
   const ope = Boolean(anchorEl);
+
+  const handleOpeno = () => setOpeno(true);
+  const handleCloseo = () => setOpeno(false);
+  const handleTask = ()=>{
+    if(fname.length >= 1  && lname.length >= 1 && 
+      dobirth.length == 10 && email.length >= 1  ){
+        setCount(0);
+        FetchDataRequest()
+        .then((res) => (
+         res.data.map((item) => {
+          if(item.email == email || item.dobirth == dobirth){
+            setCount(1);
+           return 
+         }
+       })
+    ))
+  }
+  else {
+    alert("Please fill detalis right");
+  }
+  CheckEmailAndNumberinSign()
+    }
+    
+    const CheckEmailAndNumberinSign = () => {
+      if(count === 0){
+        PostData(fname,lname,dobirth,email)   
+        setEmail("");
+        setDobirth("");
+        setLname("");
+        setFname("");
+      }
+      else{
+        alert("Email and number is already taken");
+      }
+
+  }
+
+  const onClickLogin = () => {
+    setCount(0);
+    FetchDataRequest()
+    .then((res) => (
+      res.data.map((item) => {
+       if(item.email == pcode && item.dobirth == phone){
+       setCount(1);
+      }
+    })
+    ))
+    if(count == 0){
+      alert("Invalid")
+    }else{
+      dispatch(loginauth(true))
+        alert("Succes login");
+    }
+  }
 
   const onClickList = (title) => {
     setSearchText(title);
@@ -149,7 +206,6 @@ console.log(fname,lname,dobirth,email)
       setSuggestion(out);
     }
   }, [searchText]);
-  //console.log(suggestion, active);
 
   return (
     <div className={styles.Navbartop}>
@@ -167,6 +223,8 @@ console.log(fname,lname,dobirth,email)
             className={styles.inputSearch}
             type="text"
             placeholder="Start your search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
           />
 
           {showSearch && <Search />}
@@ -176,7 +234,7 @@ console.log(fname,lname,dobirth,email)
             className={styles.searchButton}
           >
             {/* {showSearch ? "Hide" : "Search Dates"} */}
-            <p>Chack in & out and Add gust </p>
+            <p>Check in & Check out and Add gust </p>
           </button>
           {/* <SearchIcon /> */}
         </div>
@@ -217,23 +275,11 @@ console.log(fname,lname,dobirth,email)
           </div>
         </div>
       </div>
-      {isLoading && (
-        <SuggestionBox active={active} limit={5}>
-          {suggestion.map((item, index) => (
-            <div
-              key={item.City}
-              onMouseOver={() => setActive(index + 1)}
-              onClick={() => onClickList(item.City)}
-            >
-              {item.City}
-            </div>
-          ))}
-        </SuggestionBox>
-      )}
+     
 
       <div>
 
-      
+       {/* // loginPAge  */}
       <Modal
         open={open}
         onClose={handleCloses}
@@ -248,14 +294,13 @@ console.log(fname,lname,dobirth,email)
           <hr />
           <h1 style={{ fontSize: "22px" }}>Welcome to Airbnb</h1>
           <div>
-          <TextField id="filled-basic" label="Country Code" variant="filled"
+          <TextField id="filled-basic"
+           label="Email" variant="filled"
           style={{
             width: "95%",
             
            borderRadius: "10px"
           }}
-            
-              type="code"
               value={pcode}
               onChange={(e) => setPcode(e.target.value)}
           />
@@ -265,7 +310,7 @@ console.log(fname,lname,dobirth,email)
                 width: "95%",
                 
               }}
-              label="Country Code"
+              label="Phone number"
               variant="filled"
               type="phoneNo"
               value={phone}
@@ -289,7 +334,8 @@ console.log(fname,lname,dobirth,email)
               padding: "20px 0px 20px 0px",
               borderRadius: "10px"
             }}
-            type="submit"
+            
+            onClick={() => onClickLogin()}
           >
             Continue
           </button>
@@ -385,6 +431,7 @@ console.log(fname,lname,dobirth,email)
       >
         <Box sx={style}>
         <button onClick={handleCloseo} style={{border: "0", background: "transparent", marginBottom: "20px", fontSize: "20px"}}>X</button>
+           <h2>Sign up</h2>
           <div>
             <TextField
               style={{
@@ -423,7 +470,7 @@ console.log(fname,lname,dobirth,email)
               }}
               variant="filled"
               type="number"
-              label="Age"
+              label="Phone"
               value={dobirth}
               onChange={(e) => setDobirth(e.target.value)}
             />
@@ -502,6 +549,19 @@ console.log(fname,lname,dobirth,email)
                 />
               </Fab>
             </div>
+            {isLoading && (
+        <SuggestionBox active={active} limit={5}>
+          {suggestion.map((item, index) => (
+            <div
+              key={item.City}
+              onMouseOver={() => setActive(index + 1)}
+              onClick={() => onClickList(item.City)}
+            >
+              {item.City}
+            </div>
+          ))}
+        </SuggestionBox>
+      )}
     </div>
   );
 }

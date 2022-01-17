@@ -12,7 +12,7 @@ export default function Cancellation({date}){
         Cancellation policy
         </h2>
         <div>
-            <p><b>Free cancellation before 10:00 am on {date}.</b> After that, cancel before 10:00 am on 18 Jan and get a full refund, minus the first night and service fee. <a>Learn more</a></p>
+            <p><b>Free cancellation before 10:00 am on {date}.</b> After that, cancel before 10:00 am on {date }  and get a full refund, minus the first night and service fee. <a>Learn more</a></p>
             <p>Our Extenuating Circumstances policy does not cover travel disruptions caused by COVID-19. <a>Learn more</a></p>
         </div>
         <div style={{ display: 'flex', borderTop: '1px solid gray',borderBottom: '1px solid lightgray',padding: "20px 0"}}>

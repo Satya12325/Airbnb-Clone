@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./BookingPage.module.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Paper from "@mui/material/Paper";
@@ -18,15 +17,42 @@ import TextField from '@mui/material/TextField';
 import Cancellation from '../Components/CanceLation'
 import PriceDetails from '../Components/PriceDetails'
 import Footer from "../Footer/Footer";
-
+import {Link, useHistory} from "react-router-dom"
+import React , {useState , useEffect} from "react";
+import axios from "axios"; 
+import { useSelector } from 'react-redux';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 
 
-export default function Booking() {
+export default function BookingPage() {
+  const history = useHistory();
+  const id = useSelector((state) => state.id);
+  const [hotel,setHotel]= useState(null);
+  const [isLoading ,setLoading] = useState(true);
+  const guest = useSelector((state) => state.guests);
+  const night = useSelector((state) => state.night);
+ const fetchData = () => {
+   return axios.get('http://localhost:3000/Available/'+id)
+}
+const handleFetch = async () => {
+   try {
+     setLoading(true);
+       const {data} = await fetchData();
+       setHotel(data)
+       console.log(data);
+       setLoading(false) 
+   }
+   catch (error) {
+       console.error(error);
+   }
+}
 
+ useEffect(() => {
+   handleFetch()
+  },[])
     const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -38,22 +64,25 @@ export default function Booking() {
   };
 
 
+  const prevPage = () => {
+    history.push(`/hotels/${id}`)
+  }
 
 
   return (
       <>
     <div>
       <div className={style.BookingNav}>
-        <img
+        <Link to="/"><img
           style={{ height: "80px", paddingLeft: "20px", width: "120px" }}
           src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           alt=""
-        />
+        /></Link>
       </div>
     <div style={{display: "flex",}}>
       <div className={style.mainBook}>
         <div className={style.return}>
-          <h1 style={{ fontWeight: "600" }}>
+          <h1 style={{ fontWeight: "600" }} onClick={prevPage}>
             <ArrowBackIosIcon /> Request to book
           </h1>
         </div>
@@ -89,11 +118,11 @@ export default function Booking() {
           <h2 style={{ fontWeight: "600" }}>Your trip</h2>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <h5 style={{ fontWeight: "600", lineHheight: 0 }}>Dates</h5>
-            <p>18-19 Jan</p>
+            <p>{night}</p>
           </div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h5 style={{ fontWeight: "600", lineHheight: 0 }}>Guests</h5>
-            <p>1 guest</p>
+            <h5 style={{ fontWeight: "600", lineHheight: 0 }}>Guest</h5>
+            <p>{guest}</p>
           </div>
           <hr/>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -157,21 +186,23 @@ export default function Booking() {
       </Dialog>
       <hr/>
       <Cancellation
-      date='17 jan'
+      date='22 jan'
       />
         </div>
         <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button>
       </div>
-            <PriceDetails
-            image=""
-            hotelNAme=""
-            rating=""
-            price=""
-            day=""
-            total=""
-            taxes=""
-            Alltotal=""
-            />
+           {isLoading ? <h2>..loading</h2> : (
+              <PriceDetails
+              image={hotel.Image1}
+              hotelName={hotel["Hotel name"]}
+              rating={hotel.Rating}
+              price={hotel.Price}
+              day={night}
+              
+              taxes={hotel.Tax}
+              
+              />
+           )}
 
       </div>
       
