@@ -1,9 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import "./cityWise.css";
 import {useState, useEffect} from "react"
 import {  useHistory } from "react-router-dom";
+import { id } from "../Redux/action";
 const fetchUser = () => {
     return axios.get('http://localhost:3000/Available')
 }
@@ -23,6 +24,7 @@ const ListOfCityHotel = () => {
     const FreeParking = useSelector((state) => state.FreeParking);
     const [changeImage , setImage] = useState(1);
     let history = useHistory();
+    const dispatch = useDispatch();
     const handleFetch = async () => {
         try {
             setIsLoading(true);
@@ -60,9 +62,10 @@ const ListOfCityHotel = () => {
         }
     }
   
-     const onPaymentPage = (id) => {
-         alert("id");
-        history.push(`/hotels/:${id}`)
+     const onPaymentPage = (ids) => {
+         console.log(ids,"ids");
+         dispatch(id(ids))
+        history.push(`/hotels/:${ids}`)
      }
 
     return (

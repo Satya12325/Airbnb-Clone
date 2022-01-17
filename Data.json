@@ -1,0 +1,143 @@
+{
+    "cars":[
+        {   
+            "id":1,
+            "supply":"Alamo",
+            "price":4677,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 2,
+            "supply":"Alamo",
+            "price":4700,
+            "Milage": 250,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 3,
+            "supply":"Alamo",
+            "price":3677,
+            "Milage": 350,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 4,
+            "supply":"Avis",
+            "price":4607,
+            "Milage": 370,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":5,
+            "supply":"Avis",
+            "price":4500,
+            "Milage": 200,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 6,
+            "supply":"Avis",
+            "price":5000,
+            "Milage": 250,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 7,
+            "supply":"Budget",
+            "price":4900,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":8,
+            "supply":"Budget",
+            "price":4600,
+            "Milage": 370,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":9,
+            "supply":"Budget",
+            "price":4500,
+            "Milage": 250,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":10,
+            "supply":"Citi Rental",
+            "price":4507,
+            "Milage": 390,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },{   
+            "id":11,
+            "supply":"Citi Rental",
+            "price":4677,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 12,
+            "supply":"Citi Rental",
+            "price":4577,
+            "Milage": 350,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 13,
+            "supply":"Currie Motors Car & Van Rental",
+            "price":4677,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 14,
+            "supply":"Currie Motors Car & Van Rental",
+            "price":4500,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":15,
+            "supply":"Currie Motors Car & Van Rental",
+            "price":4877,
+            "Milage": 350,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 16,
+            "supply":"Easirent",
+            "price":4600,
+            "Milage": 240,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id": 17,
+            "supply":"Easirent",
+            "price":4800,
+            "Milage": 350,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":18,
+            "supply":"Easirent",
+            "price":4677,
+            "Milage": 300,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":19,
+            "supply":"Enterprise",
+            "price":5000,
+            "Milage": 400,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        },
+        {
+            "id":20,
+            "supply":"Enterprise",
+            "price":4600,
+            "Milage": 350,
+            "image": "https://res.cloudinary.com/fareoffice/image/upload/s--VZD5PZ6t--/f_auto,q_auto/v1/carpics/al/us/ccar"
+        }
+    ]
+}
