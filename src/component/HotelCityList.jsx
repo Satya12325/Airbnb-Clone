@@ -4,6 +4,7 @@ import ListOfCityHotel from "./ListOfCityHotel";
 import "./cityWise.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import NavBar from "../NavbarHome/NavBAr"
 import { filterAircondition, filterfreecancelation, filterFreeparking, filterkitchen, filterPool, filterWashingmachine, filterwifi } from "../Redux/action";
 
 const HotelCityList = () => {
@@ -41,7 +42,7 @@ const HotelCityList = () => {
 
     return(
         <>
-        <Header />
+        <NavBar />
       <div className="fillter_box_btn">
             <button className="fillter_btn">Price</button>
             <button className="fillter_btn" onClick={() => freecancelationClick()}>Free cancellation</button>
@@ -64,9 +65,7 @@ const HotelCityList = () => {
     <ListOfCityHotel  />
     <p>Enter dates to see full pricing. Additional fees apply. Taxes may be added</p>
       </div>
-      <div>
-        <CityWiseMap  />  
-      </div>
+      
         </div>
          <Footer />
         </>
