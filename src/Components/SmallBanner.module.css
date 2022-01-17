@@ -1,0 +1,14 @@
+.banner {
+  height: 35rem;
+  padding: 2rem;
+  width: 45%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  color: #ffff;
+  background-size: cover;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px;
+  
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif
+}

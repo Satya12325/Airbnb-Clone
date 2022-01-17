@@ -1,0 +1,19 @@
+.BookingNav {
+  height: 80px;
+  width: 99.80%;
+  border: 1px solid lightgray;
+  
+}
+
+.mainBook{
+  margin: 50px 70px;
+  width: 46%;
+  /* border: 1px solid lightgray; */
+
+}
+.return{
+  display: flex;
+}
+.sub_div{
+  margin: 30px 0;
+}

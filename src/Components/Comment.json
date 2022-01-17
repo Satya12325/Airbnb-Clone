@@ -1,0 +1,45 @@
+
+    [
+        {
+            "id":1,
+            "avatar":"https://a0.muscache.com/im/pictures/user/3a258e4a-9fff-49dc-9fcc-10fd69be301f.jpg?im_w=240",
+            "description": "I would suggest people to experience this beautiful place.. very well maintained and designed.. a good spot for family or group outing",
+            "name": "Pinesh",
+            "date": "December 2021"
+        },
+        {
+            "id":2,
+            "avatar":"https://a0.muscache.com/im/pictures/user/a64db576-b939-475e-b75b-bd70c5e645fc.jpg?im_w=240",
+            "description": "Pavan was a fantastic host. We had a great time staying at Mangowoods Serenity and eternity. The house was super clean and well maintained!",
+            "name": "Pinesh",
+            "date": "December 2021"
+        },
+        {
+            "id":3,
+            "avatar":"https://a0.muscache.com/im/pictures/user/f5386c43-ed31-4001-ac64-430c9f8757f7.jpg?im_w=240",
+            "description": "Great stay amidst nature and tasteful interiors.",
+            "name": "Pinesh",
+            "date": "November 2021"
+        },
+        {
+            "id":4,
+            "avatar":"https://a0.muscache.com/im/pictures/user/47343e37-6ef2-45cd-9c09-e4dafad3e41a.jpg?im_w=240",
+            "description": "Pavan is a great host, he gave us a quick orientation of the house and how the house came to be, was very kind and polite.",
+            "name": "Pinesh",
+            "date": "December 2021"
+        },
+        {
+            "id":5,
+            "avatar":"https://a0.muscache.com/im/pictures/user/7b16e11a-bf5c-4bb9-8eca-3fdf1a581b1b.jpg?im_w=240",
+            "description": "Location: took us only about 40 minutes to get there from Gachibowli. Incredibly close for a remote getaway.",
+            "name": "Pinesh",
+            "date": "December 2021"
+        },
+        {
+            "id":6,
+            "avatar":"https://a0.muscache.com/im/pictures/user/f2fdbcb6-4ca5-45ab-932e-cb91f67f2548.jpg?im_w=240",
+            "description": "Undoubtedly 'THE BEST'.You name it - You have it here.Staff, Hosting, cleanliness, ambience, locality, property...",
+            "name": "Pinesh",
+            "date": "November 2021"
+        }
+    ]

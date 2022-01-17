@@ -1,0 +1,16 @@
+.titleDiv{
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 100px;
+}
+.imageDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+._1vjikx5{
+    display: flex;
+    margin-bottom: 24px 
+}

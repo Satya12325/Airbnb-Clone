@@ -1,0 +1,38 @@
+p{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.FooterContainer{
+    background-color: #F7F7F7;
+    margin-top: 5rem;
+}
+.box{
+    margin-right: 50px !important;
+    padding-top: 40px;
+}
+.Downfooter{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+.DownfooterLanguge{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+    
+.DownfooterLanguge > div {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.footerIcon{
+    width: 150px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+i{
+    font-size: 1.2em;
+}
