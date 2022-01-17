@@ -78,6 +78,7 @@
   ::placeholder{
     color: black;
     font-size: 13px;
+    text-align: center;
   }
   .inputSearch:hover{
     background-color: rgb(226, 223, 223);

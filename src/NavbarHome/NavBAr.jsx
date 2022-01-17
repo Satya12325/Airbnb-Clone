@@ -242,7 +242,7 @@ function NavBar() {
             className={styles.searchButton}
           >
             {/* {showSearch ? "Hide" : "Search Dates"} */}
-            <p style={{fontSize:"12px"}}>Check in & Check out and Add guest </p>
+            <p style={{fontSize:"12px"}}>Check in & Check out </p>
           </button>
           <SearchIcon style={{background: "#FF385C", padding:"10px", borderRadius: "50%", cursor: "pointer", marginRight:"5px"}}
           onClick={() => hotelPage()}
