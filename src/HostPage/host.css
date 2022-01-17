@@ -1,0 +1,27 @@
+.rightbox_host{
+    width: 50%;
+    height: 656px;
+    background-color: black;
+    color: white;
+}
+.title_center{
+    justify-content: center;
+    margin-top: 30%;
+    font-size: 50px;
+    text-align: center;
+}
+.left_box{
+    background: rgb(211,38,119);
+background: linear-gradient(180deg, rgba(211,38,119,1) 5%, rgba(211,38,119,1) 14%, rgba(67,28,160,1) 81%, rgba(67,28,160,1) 99%);
+    width: 50%;
+    height: 700px;
+    color: white;
+}
+.form_box{
+    margin-Top : 150px;
+    margin-left: 60px;
+}
+.form_box input{
+    margin:20px;
+    text-align: center;
+}

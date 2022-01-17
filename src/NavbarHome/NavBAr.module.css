@@ -1,0 +1,119 @@
+.Navbartop{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+   background-color: black;
+   color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 0px;
+  
+  }
+  
+  .header__icon {
+    object-fit: contain;
+    height: 100px;
+    margin-left: 20px;
+  }
+  
+  .header__center {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    max-width: fit-content;
+    border-radius:20px;
+    height: 55px;
+    border: 1px solid lightgray;
+    border-radius: 999px;
+    font-size: 40px;
+    background-color: #fff;
+  }
+  
+  .header__center > input {
+    border: none;
+    border-radius:30px;
+    outline-width: 0;
+    /* width: 250px; */
+    padding: 0px 10px;
+   
+  }
+  
+  .header__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 20vw;
+    margin-right: 80px;
+  }
+  .header__right a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .searchButton{
+      border: none;
+      border-radius:30px;
+      height: 55px;
+      width: 250px;
+      background-color: transparent;
+      color: white;
+      font-size: 22px;
+  }
+  .inputSearch{
+      max-width: 150px;
+      background-color: white;
+      height: 55px;
+      cursor: pointer;
+      color: rgb(12, 11, 11);
+      font-size: 18px;
+    }
+
+  ::placeholder{
+    color: black;
+    font-size: 13px;
+  }
+  .inputSearch:hover{
+    background-color: rgb(226, 223, 223);
+  }
+  .searchButton:hover{
+    background-color: rgb(226, 223, 223);
+  }
+  .searchButton{
+    background-color: white;
+    color: black;
+    
+  }
+  .MenuUser{
+    color: rgb(104, 101, 101);
+    display: flex;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 30px;
+    background: white;
+  }
+
+  .smallBg{
+    max-width: 400px;
+    margin:  auto;
+    display:none;
+    
+  }
+  @media screen and (max-width: 1000px) {
+    .header__right > p{
+      display: none
+    }
+    .smallBg{
+      display: block
+    }
+    .header{
+      display: none;
+    }
+  }
