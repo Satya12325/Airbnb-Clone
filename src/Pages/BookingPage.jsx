@@ -22,6 +22,10 @@ import {Link, useHistory} from "react-router-dom"
 import React , {useState , useEffect} from "react";
 import axios from "axios"; 
 import { useSelector } from 'react-redux';
+import PaymentSucess from "../Components/PaymentSucess"
+
+
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -183,6 +187,7 @@ const handleFetch = async () => {
         <DialogActions>
          
           <Button onClick={handleClose} style={{width: "500px", height: "30px",padding: "20px", marginRight: "20px"}}>Apply</Button>
+       
         </DialogActions>
       </Dialog>
       <hr/>
@@ -190,7 +195,9 @@ const handleFetch = async () => {
       date='22 jan'
       />
         </div>
-        <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button>
+        {/* <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button> */}
+        <PaymentSucess/>
+      
       </div>
            {isLoading ? <h2>..loading</h2> : (
               <PriceDetails
