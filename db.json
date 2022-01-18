@@ -92,7 +92,7 @@
       "Facility": {
         "Wifi": true,
         "Free cancellation": false,
-        "Pool": false,
+        "Pool": true,
         "Air condition": true,
         "Kitchen": true,
         "Free parking": false,
@@ -117,7 +117,7 @@
       "Facility": {
         "Wifi": true,
         "Free cancellation": false,
-        "Pool": false,
+        "Pool": true,
         "Air condition": true,
         "Kitchen": false,
         "Free parking": true,
@@ -616,7 +616,7 @@
       "About": "",
       "Facility": {
         "Wifi": true,
-        "Free cancellation": false,
+        "Free cancellation": true,
         "Pool": false,
         "Air condition": true,
         "Kitchen": true,
@@ -641,8 +641,8 @@
       "About": "Located in Mahipalpur Near Delhi Airport (3 KM). Nearest Metro Stations is Delhi Aerocity (1 KM). ",
       "Facility": {
         "Wifi": true,
-        "Free cancellation": false,
-        "Pool": false,
+        "Free cancellation": true,
+        "Pool": true,
         "Air condition": true,
         "Kitchen": false,
         "Free parking": true,
@@ -692,7 +692,7 @@
       "Facility": {
         "Wifi": true,
         "Free cancellation": false,
-        "Pool": false,
+        "Pool": true,
         "Air condition": true,
         "Kitchen": true,
         "Free parking": true,
@@ -1240,13 +1240,13 @@
       "Tagline": "Private room in villa hosted by Erlick",
       "About": "Casa Abilio de Souza is a 150 year old house, owned by the Ferreira family. We have 1 small size AC room with a view of ancestral Goa. Accommodates up to 2 adults comfortably. We also have an in house housekeeper. In 2010, Erlick Ferreira, the grandson of Abilio de Sousa began restoring the property. After 5 long years, the house is now restored to its former glory with wooden flooring and high wooden ceilings, while carefully maintaining its aesthetics. ",
       "Facility": {
-        "Wifi": "True",
-        "Free cancellation": "False",
-        "Pool": "False",
-        "Air condition": "True",
-        "Kitchen": "True",
-        "Free parkink": "True",
-        "Washing machine": "fasle"
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": true,
+        "Free parkink": true,
+        "Washing machine": false
       },
       "Tax": 182
     },
@@ -1265,13 +1265,13 @@
       "Tagline": "Private room in chalet hosted by Marilyn",
       "About": "An ideal getaway after being cooped up due to the Covid-19 situation and Compliant with safety procedures, these are lovely cottages with all amenities + great Wifi just opposite to the river and just 2 mins off from the Morjim Beach that allows for refreshing walks.",
       "Facility": {
-        "Wifi": "True",
-        "Free cancellation": "True",
-        "Pool": "True",
-        "Air condition": "True",
-        "Kitchen": "True",
-        "Free parkink": "True",
-        "Washing machine": "fasle"
+        "Wifi": true,
+        "Free cancellation": true,
+        "Pool": true,
+        "Air condition": true,
+        "Kitchen": true,
+        "Free parkink": true,
+        "Washing machine": true
       },
       "Tax": 332
     },
@@ -1290,13 +1290,13 @@
       "Tagline": "Private room in cottage hosted by Ingo",
       "About": "Welcome to Goa Cottages in Agonda Beach, which has replaced White Sand Beach Resort on arguably Agonda's most beautiful beachfront property, offering luxurious cottages with stunning sea- & garden views.",
       "Facility": {
-        "Wifi": "True",
-        "Free cancellation": "True",
-        "Pool": "True",
-        "Air condition": "True",
-        "Kitchen": "True",
-        "Free parkink": "True",
-        "Washing machine": "True"
+        "Wifi": true,
+        "Free cancellation": true,
+        "Pool": true,
+        "Air condition": true,
+        "Kitchen": true,
+        "Free parkink": true,
+        "Washing machine": false
       },
       "Tax": 782
     },
@@ -1315,13 +1315,13 @@
       "Tagline": "Entire rental unit hosted by Surbhi",
       "About": "Who doesn't like to Stay near the Beach and walking distance from Chapora River. Enjoy common Infinity pool at Terrace with Sceanic view of Chapora River & Chapora Fort.",
       "Facility": {
-        "Wifi": "True",
-        "Free cancellation": "False",
-        "Pool": "True",
-        "Air condition": "True",
-        "Kitchen": "True",
-        "Free parkink": "True",
-        "Washing machine": "fasle"
+        "Wifi": false,
+        "Free cancellation": false,
+        "Pool": true,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parkink": true,
+        "Washing machine": true
       },
       "Tax": 332
     },
@@ -1340,13 +1340,13 @@
       "Tagline": "Hut hosted by Vinayak",
       "About": "Cozy and casual beach front Huts, for the easy going way of life near the coast. Nested in North goa, Arambol the rooms are simple and sober with all the huts having sea view. The space is located on the cliff side of the famous Arambol walkway market. Ideally suitable for the people who want to enjoy the beach side of goa, away from the people and looking for a rejuvenating holiday.",
       "Facility": {
-        "Wifi": "false",
-        "Free cancellation": "True",
-        "Pool": "false",
-        "Air condition": "false",
-        "Kitchen": "false",
-        "Free parkink": "false",
-        "Washing machine": "fasle"
+        "Wifi": false,
+        "Free cancellation": false,
+        "Pool": true,
+        "Air condition": true,
+        "Kitchen": true,
+        "Free parkink": true,
+        "Washing machine": true
       },
       "Tax": 0
     },
@@ -1365,13 +1365,13 @@
       "Tagline": "Entire rental unit hosted by Amit",
       "About": "Beautifully decorated apartment for relaxation / celebration . Unwind yourself with an amazing runway view from the balcony , comfortable beds and a loaded living room with wifi dth and alexa . Kitchen is designed to light cook and has a microwave minbar fridge and a full fledged fridge with bar accessories and a wall mounted bar equipped, just in case . We would love to host you and create an experience for you. Couples are welcome - so is everyone .",
       "Facility": {
-        "Wifi": "false",
-        "Free cancellation": "false",
-        "Pool": "false",
-        "Air condition": "false",
-        "Kitchen": "True",
-        "Free parkink": "True",
-        "Washing machine": "fasle"
+        "Wifi": false,
+        "Free cancellation": false,
+        "Pool": true,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parkink": true,
+        "Washing machine": true
       },
       "Tax": 0
     },
@@ -2049,6 +2049,131 @@
       },
       "Tax": 154,
       "id": 313
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "2",
+      "Price": "2321",
+      "Image1": "132",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 314
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "2",
+      "Price": "2321",
+      "Image1": "132",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 315
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "2",
+      "Price": "2321",
+      "Image1": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 316
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "2",
+      "Price": "231",
+      "Image1": "12131",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 317
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "23",
+      "Room Avialable": "2",
+      "Price": "231",
+      "Image1": "23",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 318
     }
   ],
   "signup": [

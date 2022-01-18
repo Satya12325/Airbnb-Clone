@@ -23,7 +23,7 @@ import React , {useState , useEffect} from "react";
 import axios from "axios"; 
 import { useSelector } from 'react-redux';
 import PaymentSucess from "../Components/PaymentSucess"
-
+import NavBAr from "../NavbarHome/NavBAr"
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -73,17 +73,22 @@ const handleFetch = async () => {
     history.push(`/hotels/${id}`)
   }
 
+  function hotelBooked(){
+    alert("Hotel is Booked");
+    history.push("/");
+  }
 
   return (
       <>
+      <NavBAr/>
     <div>
-      <div className={style.BookingNav}>
+      {/* <div className={style.BookingNav}>
         <Link to="/"><img
           style={{ height: "80px", paddingLeft: "20px", width: "120px" }}
           src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           alt=""
         /></Link>
-      </div>
+      </div> */}
     <div style={{display: "flex",}}>
       <div className={style.mainBook}>
         <div className={style.return}>

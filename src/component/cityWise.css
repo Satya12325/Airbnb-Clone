@@ -1,13 +1,11 @@
 .city_box{
-    display: flex;
     margin-left: 10px;
     margin-top: 150px;
 }
-.Hotel_detalis{
-    display: flex;
+/* .Hotel_detalis{
     width: 700px;
 
-}
+} */
 .second_box_detalis{
     margin-left: 12px;
 }
@@ -42,7 +40,7 @@
     width: 100%;
     z-index: 100;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
-    top: 100px;
+    top: 70px;
 }
 .fillter_btn{
     border-radius: 20px;
