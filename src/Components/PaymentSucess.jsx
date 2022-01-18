@@ -46,7 +46,7 @@ export default function PaymentSucess(){
        
         <img style={{width:"30%", margin:"auto"}} src={logo} alt=""/>
         
-          <h1 style={{textAlign: "center", color:"#1D6222"}}>Booking Sucessfull</h1>
+          <h1 style={{textAlign: "center", color:"#1D6222"}}>Booking Successful</h1>
         <p style={{textAlign: "center", color:""}}>Transition Id : {uuidv4()}</p>
         
           <Button onClick={handleClose}variant="contained" color="success">Sucess</Button>
