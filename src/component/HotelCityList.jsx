@@ -5,7 +5,7 @@ import "./cityWise.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavbarHome/NavBAr"
-import { filterAircondition, filterfreecancelation, filterFreeparking, filterkitchen, filterPool, filterWashingmachine, filterwifi } from "../Redux/action";
+import { filterAircondition, filterfreecancelation, filterFreeparking, filterkitchen, filterPool, filterprice, filterWashingmachine, filterwifi } from "../Redux/action";
 
 const HotelCityList = () => {
     const dispatch = useDispatch();
@@ -17,7 +17,10 @@ const HotelCityList = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
-    console.log(cityname,"cityname");
+    const sortPrice = useSelector((state) => state.sortPrice);
+    const sortPriceAscendingorder = () => {
+      dispatch(filterprice(sortPrice))
+    }
     const freecancelationClick = () => {
         dispatch(filterfreecancelation(freecancelations))
      }
@@ -44,14 +47,14 @@ const HotelCityList = () => {
         <>
         <NavBar />
       <div className="fillter_box_btn">
-            <button className="fillter_btn">Price</button>
-            <button className="fillter_btn" onClick={() => freecancelationClick()}>Free cancellation</button>
-            <button className="fillter_btn" onClick={() => wifiClick()}>Wifi</button>
-            <button className="fillter_btn" onClick={() => kitchenClick()}>Kitchen</button>
-            <button className="fillter_btn" onClick={() => airconditionClick()}>Air conditioning</button>
-            <button className="fillter_btn" onClick={() => washingmachineClick()}>Washing machine</button>
-            <button className="fillter_btn" onClick={() => poolClick()}>Pool</button>
-            <button className="fillter_btn" onClick={() => freeParkingClick()}>Free parking</button>
+            <button className="fillter_btn" style={{ background :  sortPrice ? '#E31c5f' : "white"}} onClick={() => freecancelationClick()}>Price</button>
+            <button className="fillter_btn" style={{ background :  freecancelations ? '#E31c5f' : "white"}} onClick={() => freecancelationClick()}>Free cancellation</button>
+            <button className="fillter_btn" style={{ background :  wifi ? '#E31c5f' : "white"}} onClick={() => wifiClick()}>Wifi</button>
+            <button className="fillter_btn" style={{ background :  kitchen ? '#E31c5f' : "white"}} onClick={() => kitchenClick()}>Kitchen</button>
+            <button className="fillter_btn" style={{ background :  Aircondition ? '#E31c5f' : "white"}} onClick={() => airconditionClick()}>Air conditioning</button>
+            <button className="fillter_btn"  style={{ background :  WashingMachine ? '#E31c5f' : "white"}}onClick={() => washingmachineClick()}>Washing machine</button>
+            <button className="fillter_btn" style={{ background :  Pool ? '#E31c5f' : "white"}} onClick={() => poolClick()}>Pool</button>
+            <button className="fillter_btn" style={{ background :  FreeParking ? '#E31c5f' : "white"}} onClick={() => freeParkingClick()}>Free parking</button>
         </div>
         <div className="city_box">
       <div>

@@ -2,6 +2,7 @@ import { appComponet } from "./actionType"
 
 const initState = {
     cityname : "Goa",
+    sortPrice : false,
     freecancelation: false,
     Wifi : false,
     kitchen : false,
@@ -17,6 +18,12 @@ const initState = {
 
 export const reduce = (state  = initState , {payload , type}  ) => {
     switch(type){
+        case appComponet.FILTER_PRICE : {
+            return{
+                ...state,
+                sortPrice : payload
+            }
+        }
         case appComponet.NIGHT_STAY : {
             return{
                 ...state,

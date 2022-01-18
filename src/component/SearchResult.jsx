@@ -12,7 +12,7 @@ function SearchResult({
     price,
    
 }) {
-    console.log(img,location,title,description,star,price)
+    console.log(price);
     return (
         <div className='searchResult'>
             <img src={img} alt="" />

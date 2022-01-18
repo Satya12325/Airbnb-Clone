@@ -23,6 +23,7 @@ const ListOfCityHotel = () => {
     const WashingMachine = useSelector((state) => state.WashingMachine);
     const Pool = useSelector((state) => state.Pool);
     const FreeParking = useSelector((state) => state.FreeParking);
+    const sortPrice = useSelector((state) => state.sortPrice);
     const [changeImage , setImage] = useState(1);
     let history = useHistory();
     const dispatch = useDispatch();
@@ -69,6 +70,7 @@ const ListOfCityHotel = () => {
         history.push(`/hotels/:${ids}`)
      }
 
+     console.log(freecancelations,"free");
     return (
         <>
         
@@ -76,8 +78,8 @@ const ListOfCityHotel = () => {
          item.City === cityname
          )
         .filter((item) => 
-         freecancelations ? 
-              item.Facility["Free cancellation"] == freecancelations : true
+         freecancelations  ?  
+              item.Facility["Free cancellation"] == freecancelations  : true
          ) 
          .filter((item) => 
          wifi ? 

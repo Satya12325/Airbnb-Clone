@@ -199,16 +199,16 @@ export default function HotelDetail(){
                             <p style={{textAlign:"center"}}>You won't be charged yet</p>
                             <div style={{display:"flex"}}>
                             <h3>₹{hotel.Price} X {night}</h3>
-                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{(hotel.Price ) * (night)} </h3>
+                              <h3 style={{textAlign:"right",marginLeft:"150px"}}>₹{(hotel.Price ) * (night)} </h3>
                             </div>
                             
                             <div style={{display:"flex"}}>
                             <h3>Service Fee</h3>
-                              <h3 style={{textAlign:"right",marginLeft:"200px"}}>₹{hotel.Tax} </h3>
+                              <h3 style={{textAlign:"right",marginLeft:"150px"}}>₹{hotel.Tax} </h3>
                             </div>
                             <div style={{display:"flex"}}>
                             <h3>Total before taxes</h3>
-                              <h3 style={{textAlign:"right",marginLeft:"130px"}}>₹{hotel.Tax + (hotel.Price * night + guest * 300 - 300) * days} </h3>
+                              <h3 style={{textAlign:"right",marginLeft:"100px"}}>₹{hotel.Tax + (hotel.Price * night + guest * 300 - 300) * days} </h3>
                             </div>
                         </div>
                     </div>

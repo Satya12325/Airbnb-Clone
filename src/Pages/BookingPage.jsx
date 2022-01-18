@@ -22,6 +22,7 @@ import {Link, useHistory} from "react-router-dom"
 import React , {useState , useEffect} from "react";
 import axios from "axios"; 
 import { useSelector } from 'react-redux';
+import NavBAr from "../NavbarHome/NavBAr"
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -69,17 +70,22 @@ const handleFetch = async () => {
     history.push(`/hotels/${id}`)
   }
 
+  function hotelBooked(){
+    alert("Hotel is Booked");
+    history.push("/");
+  }
 
   return (
       <>
+      <NavBAr/>
     <div>
-      <div className={style.BookingNav}>
+      {/* <div className={style.BookingNav}>
         <Link to="/"><img
           style={{ height: "80px", paddingLeft: "20px", width: "120px" }}
           src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
           alt=""
         /></Link>
-      </div>
+      </div> */}
     <div style={{display: "flex",}}>
       <div className={style.mainBook}>
         <div className={style.return}>
@@ -190,7 +196,7 @@ const handleFetch = async () => {
       date='22 jan'
       />
         </div>
-        <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}}>Request to book</Button>
+        <Button variant="contained" style={{backgroundColor: "#D80666",textTransform: "none", padding: "10px 30px"}} onClick={hotelBooked}>Request to book</Button>
       </div>
            {isLoading ? <h2>..loading</h2> : (
               <PriceDetails
