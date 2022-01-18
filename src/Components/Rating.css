@@ -49,7 +49,7 @@
   }
   
   /* Individual bars */
-  .bar-5 {width: 95%; height: 5px; background-color: black;border-radius: 10px}
+  .bar-5 {width: 100%; height: 5px; background-color: black;border-radius: 10px}
   .bar-4 {width: 90%; height: 5px; background-color: black; border-radius: 10px}
   .bar-3 {width: 85%; height: 5px; background-color: black; border-radius: 10px}
   .bar-2 {width: 80%; height: 5px; background-color: black; border-radius: 10px}
