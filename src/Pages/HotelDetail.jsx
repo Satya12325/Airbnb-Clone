@@ -46,7 +46,7 @@ export default function HotelDetail(){
         
 
     const fetchData = () => {
-        return axios.get(`http://localhost:3000/Available/${id}`)
+        return axios.get(`https://airbnb-json-server.herokuapp.com/Available/${id}`)
     }
     const handleFetch = async () => {
         try {

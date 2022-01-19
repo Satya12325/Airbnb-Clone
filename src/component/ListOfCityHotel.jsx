@@ -7,7 +7,7 @@ import {  useHistory } from "react-router-dom";
 import { id } from "../Redux/action";
 import SearchResult from "./SearchResult.jsx";
 const fetchUser = () => {
-    return axios.get('http://localhost:3000/Available')
+    return axios.get('https://airbnb-json-server.herokuapp.com/Available')
 }
 
 

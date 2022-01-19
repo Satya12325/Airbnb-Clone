@@ -40,18 +40,18 @@ export default function BookingPage() {
   const guest = useSelector((state) => state.guests);
   const night = useSelector((state) => state.night);
  const fetchData = () => {
-   return axios.get('http://localhost:3000/Available/'+id)
+   return axios.get(`https://airbnb-json-server.herokuapp.com/Available/${id}`)
 }
 const handleFetch = async () => {
    try {
      setLoading(true);
        const {data} = await fetchData();
        setHotel(data)
-       console.log(data);
+       console.log(data,"iddata");
        setLoading(false) 
    }
    catch (error) {
-       console.error(error);
+       console.error(error,"err");
    }
 }
 
