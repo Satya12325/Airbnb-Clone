@@ -2174,6 +2174,56 @@
       },
       "Tax": 154,
       "id": 318
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "2",
+      "Price": "231",
+      "Image1": "scn",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 319
+    },
+    {
+      "state": "Madhya",
+      "City": "gwalior",
+      "Hotel name": "Ritik",
+      "Room Avialable": "21",
+      "Price": "2112",
+      "Image1": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Image2": "https://a0.muscache.com/im/pictures/40af0465-16ac-4a29-af26-84922fa0f7a7.jpg?im_w=720",
+      "Image3": "https://a0.muscache.com/im/pictures/d90eb459-06b1-4fa5-a1df-519e9e5d2de6.jpg?im_w=720",
+      "Review": 57,
+      "Rating": 4.2,
+      "Tagline": "Room in boutique hotel in Gurugram",
+      "About": "It’s a boutique property with the best, convenient and peaceful location in Gurgaon.",
+      "Facility": {
+        "Wifi": true,
+        "Free cancellation": false,
+        "Pool": false,
+        "Air condition": true,
+        "Kitchen": false,
+        "Free parking": true,
+        "Washing machine": false
+      },
+      "Tax": 154,
+      "id": 320
     }
   ],
   "signup": [
@@ -2191,6 +2241,5 @@
       "email": "satya12325@gmail.com",
       "id": 8
     }
-   
   ]
 }

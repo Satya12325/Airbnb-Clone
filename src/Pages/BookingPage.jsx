@@ -39,6 +39,7 @@ export default function BookingPage() {
   const [isLoading ,setLoading] = useState(true);
   const guest = useSelector((state) => state.guests);
   const night = useSelector((state) => state.night);
+  const authLogin = useSelector((state) => state.authlogin);
  const fetchData = () => {
    return axios.get('http://localhost:3000/Available/'+id)
 }
