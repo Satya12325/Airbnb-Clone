@@ -80,7 +80,7 @@ const PostData = (fname,lname,dobirth,email) => {
     email: email
   };
   const config = {
-    url: "http://localhost:3000/signup",
+    url: "https://airbnb-json-server.herokuapp.com/signup",
     method: "POST",
     data: payload
   }
@@ -89,7 +89,7 @@ const PostData = (fname,lname,dobirth,email) => {
 
 const FetchDataRequest = () => {
   const config = {
-    url: "http://localhost:3000/signup",
+    url: "https://airbnb-json-server.herokuapp.com/signup",
     method: "get",
   }
   return axios(config);
