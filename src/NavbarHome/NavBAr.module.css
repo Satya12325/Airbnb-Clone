@@ -107,14 +107,20 @@
     display:none;
     
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 800px) {
+    .Navbartop{
+      height: 80px;
+    }
     .header__right > p{
       display: none
     }
     .smallBg{
+      margin-top: 10px;
       display: block
     }
     .header{
       display: none;
     }
+    
+    
   }

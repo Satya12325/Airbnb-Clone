@@ -58,3 +58,16 @@
   .MenuUser:hover{
     box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
   }
+  @media screen and (max-width:500px) {
+    .header__icon{
+      
+      margin-left: 10px;
+    }
+    .header__right{
+      display: none;
+    }
+    .header__center{
+      margin-right: 20px;
+    }
+    
+  }
