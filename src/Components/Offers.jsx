@@ -14,7 +14,7 @@ export default function Offers(){
 
     return(
 
-    <div style={{padding:"30px 0", width:"50%"}}>
+    <div style={{padding:"30px 0", width:"80%"}}>
     <h2 style={{ fontWeight: "600"}}>What this place offers</h2>
     <div style={{display: "flex", justifyContent: "space-between" }}>
     <div>

@@ -34,7 +34,7 @@ export default function HotelDetail(){
      const [days , setDays] = useState(1);
      const dispatch = useDispatch();
       const night = useSelector((state) => state.night);
-      console.log(night);
+     
         useEffect(() => {
             if(value[0] != null){
                 var day=Math.ceil(Math.abs(value[0]?.getTime()-value[1]?.getTime())/(24*60*60*1000));
@@ -85,8 +85,8 @@ export default function HotelDetail(){
         <div style={{marginTop:'150px'}}>Loading...</div>:
         <div>
             <div className={style.titleDiv}>
-                <div style={{maxWidth:'1120px',padding:'10px 0',margin:'0 auto'}}>
-                    <div><h1 style={{fontSize:'26px',fontWeight:'600'}}>{hotel["Hotel name"]}</h1></div>
+                <div >
+                    <div><h1 className={style.heading_line}>{hotel["Hotel name"]}</h1></div>
                     <div style={{width:'1120px',display:'flex',justifyContent: 'space-between'}}>
                         <div style={{display:'flex',flexWrap:'wrap',justifyContent:'flex-start'}}>
                             <span style={{marginRight:'5px',paddingTop:'2px'}}>
@@ -112,19 +112,19 @@ export default function HotelDetail(){
                     </div>
                     <div className={style.imageDiv}>
                         <div>
-                            <img src={hotel.Image1} alt='image1.jpg' style={{width:'720px',height:'400px',objectFit:'cover',borderTopLeftRadius:'12px',borderEndStartRadius:'12px'}}/>
+                            <img src={hotel.Image1} alt='image1.jpg' className={style.image1}   />
                         </div>
                         <div style={{display:'flex',flexDirection:'column',gap:'9px'}}>
-                        <div>
-                            <img src={hotel.Image2} alt='image1.jpg' style={{width:'390px',height:'193px',objectFit:'cover',borderTopRightRadius:'12px'}}/>
+                        <div >
+                            <img src={hotel.Image2}  alt='image2.jpg' className={style.image2} />
                         </div>
                         <div>
-                            <img src={hotel.Image3} alt='image1.jpg' style={{width:'390px',height:'193px',objectFit:'cover',borderEndEndRadius:'12px'}}/>
+                            <img src={hotel.Image3} alt='image3.jpg' className={style.image2}/>
                         </div>
                         </div>
                     </div>
-                    <div style={{display:'flex',justifyContent:'space-between'}}>
-                        <div style={{flexBasis:'654px'}}>
+                    <div  className={style.price_box}>
+                        <div style={{flexBasis:'604px'}}>
                             <h2 style={{fontWeight: '600',fontSize: '22px',lineHheight: '26px', marginBottom:'0'}}>{hotel.Tagline}</h2>
                             <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px',marginBottom:'32px'}}>{`${hotel['Room Avialable']*2} guests · ${hotel['Room Avialable']} bedroom ·  ${hotel['Room Avialable']*1} bathrooms`}</p>
                             <div style={{paddingTop: '32px', paddingBottom: '26px',borderTop:'1px solid lightgrey',borderBottom:'1px solid lightgrey',marginBottom:'32px'}}>
@@ -137,7 +137,7 @@ export default function HotelDetail(){
                             <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px',marginTop:'10px'}}>{hotel.About}</p>
                             </div>
                         </div>
-                        <div style={{flexBasis:'340px',border:'1px solid lightgrey',borderRadius:'12px',marginTop:'25px',boxShadow:'rgba(0, 0, 0, 0.20) 0px 5px 15px',padding:'20px 25px'}}>
+                        <div  className={style.dates_payment_detalis}>
                             <div style={{display:'flex',justifyContent:'space-between'}}>
                                 <div>
                                 <p style={{fontWeight: '400',fontSize: '16px',lineHheight: '20px', marginTop:'0'}}><strong style={{fontSize:'22px'}}>₹{hotel.Price}</strong> / night</p>
@@ -182,6 +182,7 @@ export default function HotelDetail(){
                                 label="Guests"
                                 value={guest}
                                 onChange={handleChangelGuests}
+                                className={style.guest_list}
                                 >
                                 <MenuItem value={1}>1</MenuItem>
                                 <MenuItem value={2}>2</MenuItem>
@@ -191,10 +192,7 @@ export default function HotelDetail(){
                                 </FormControl>
                           </div>
                           <div>
-                              <button style={{width:'350px',borderRadius:"10px",
-                              border:"none",height:"40px",background:"#e61f4d",marginTop:"20px",color:"white",fontSize:"24px"}}
-                              onClick={() => onNextPageBooking()}
-                              >Reserve</button>
+                              <button  className={style.reserve_btn} onClick={() => onNextPageBooking()}>Reserve</button>
                           </div>
                             <p style={{textAlign:"center"}}>You won't be charged yet</p>
                             <div style={{display:"flex"}}>

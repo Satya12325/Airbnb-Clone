@@ -84,3 +84,24 @@
         transform: rotate(720deg);
     }
 }
+@media screen and (max-width:800px){
+    .fillter_box_btn{
+        margin-top: -13px;
+    }
+    .city_box{
+        margin-top: 230px;
+    }
+}
+@media screen and (max-width:500px){
+    .city_box{
+        margin-top: 230px;
+    }
+    .fillter_box_btn{
+        height: 160px;
+    }
+    .fillter_box_btn button{
+        font-size: 15px;
+        margin:6px
+    }
+    
+}

@@ -107,7 +107,7 @@ const ListOfCityHotel = () => {
          ) 
          .map((item) => (
              <div key={item.id} onClick={() => onPaymentPage(item.id)}>
-                <hr />
+                {/* <hr /> */}
                 <div className="Hotel_detalis" >
                 <SearchResult img={item.Image1} 
                  location={item["Hotel name"]}

@@ -12,7 +12,6 @@ function SearchResult({
     price,
    
 }) {
-    console.log(price);
     return (
         <div className='searchResult'>
             <img src={img} alt="" />
@@ -22,8 +21,8 @@ function SearchResult({
                 <div className="searchResult__infoTop">
                     <p>{location}</p>
                     <h3>{title}</h3>
-                    <p>____</p>
-                    <p>{description}</p>
+                    <p className="line">____</p>
+                    <p className='description'>{description}</p>
                 </div>
 
                 <div className="searchResult__infoBottom">

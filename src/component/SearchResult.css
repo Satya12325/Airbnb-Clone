@@ -71,3 +71,34 @@
     bottom: 20px;
     right: 30px;
 }
+
+@media screen and (max-width:800px) {
+    .searchResult{
+        margin: 10px;
+        padding: 10px;
+    }
+    .searchResult > img{
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+@media screen  and (max-width : 500px){
+    .searchResults__price h2{
+        font-size: 13px;
+    }
+    .searchResult__heart{
+        right: 0px;
+    }
+    .line{
+        display: none;
+    }
+  .description{
+      display: none;
+  }
+    .searchResult__info{
+        height: 200px;
+    }
+}

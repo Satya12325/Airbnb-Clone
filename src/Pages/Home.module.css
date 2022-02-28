@@ -1,12 +1,16 @@
 .home__section {
     display: flex;
     padding: 30px;
-    
     overflow-x: scroll;
     overflow-x: scroll;
     scroll-behavior: smooth;
     overflow: auto;
-   
+  }
+
+  @media screen and (max-width : 800px) {
+      .home__section{
+        display: grid;
+      }
   }
   .home__section::-webkit-scrollbar {
     height: 0px;

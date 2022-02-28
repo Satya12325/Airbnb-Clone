@@ -4,6 +4,7 @@ import style from './PriceDetails.module.css'
 import React , {useState} from "react";
 import axios from "axios"; 
 import { useSelector } from 'react-redux';
+import PaymentSucess from './PaymentSucess';
 
 export default function PriceDetails({image,hotelName,rating,price,day,taxes}){
   const guest = useSelector((state) => state.guests) 
@@ -44,6 +45,9 @@ return (
             <h5 style={{ fontWeight: "400", lineHheight: "1px", fontSize: "20px"}}>₹ {Alltotal}</h5>
           </div>
         </div>
+         <div style={{marginTop:"50px",justifyContent:"center",marginLeft:"30%"}}>
+         <PaymentSucess />
+         </div>
     </div>
 )
 }

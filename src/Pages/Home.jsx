@@ -42,6 +42,7 @@ function Home() {
             <div className={style.home__section}>
                 
             <Card
+               style={{border:"1px solid red"}}
                 bgcolor={card_colr[0]}
                 src="https://a0.muscache.com/im/pictures/1cdb5298-1e10-4d5a-ac27-20c80b53b4af.jpg?im_w=480"
                 title="Goa"
@@ -49,6 +50,7 @@ function Home() {
                 onClickpage={onClickNextPage}
             />
             <Card
+               className={style.card2}
                 bgcolor={card_colr[1]}
                 src="https://a0.muscache.com/im/pictures/6adb1a38-b912-4dd6-83d7-103bb9a80d43.jpg?im_w=480"
                 title="Bangalore"
@@ -56,6 +58,7 @@ function Home() {
                 onClickpage={onClickNextPage}
             />
             <Card
+             className={style.card3}
             bgcolor={card_colr[2]}
                 src="https://a0.muscache.com/im/pictures/99eb5993-4277-4c1e-8db1-b639a96758a0.jpg?im_w=480"
                 title="Gurugram"
@@ -63,6 +66,7 @@ function Home() {
                 onClickpage={onClickNextPage}
             />
             <Card
+             className={style.card4}
             bgcolor={card_colr[3]}
                 src="https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6a00f7d5d8.jpg?im_w=480"
                 title="New Delhi"

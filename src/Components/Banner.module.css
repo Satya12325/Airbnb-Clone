@@ -13,9 +13,13 @@
       background-color: black;
       top: 30px;
   }
-  
+  @media  screen and (max-width : 600px) {
+      .bannerbackground{
+          height: 70vh;
+      }  
+  }
+    
   .banner__info {
-      
       color: white;
       padding-top: 35vh;
       padding-left: 50px;

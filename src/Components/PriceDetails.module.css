@@ -5,7 +5,6 @@
     border-radius:20px;
     padding: 20px;
     height: 83vh;
-
 }
 .image{
     width: 150px;
@@ -25,4 +24,10 @@
 }
 .gray{
     color: gray;
+}
+@media screen  and (max-width:500px){
+    .PriceDetails{
+        height: 60vh;
+    }
+    
 }

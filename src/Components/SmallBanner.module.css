@@ -1,7 +1,7 @@
 .banner {
   height: 35rem;
   padding: 2rem;
-  width: 45%;
+  min-width: 45%;
   border-radius: 20px;
   background-repeat: no-repeat;
   color: #ffff;
