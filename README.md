@@ -2,6 +2,8 @@
 It is an American company that operates an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Based in San Francisco, California, the platform is accessible via website and mobile app.
 # For this app we used HTML5,CSS, React js, javaScript, json-Server
 
+# Diploy Link :- https://airbnb-app-web.herokuapp.com/
+
 <img src="https://github.com/Satya12325/Airbnb-Clone/blob/master/Screenshot%20(25).png?raw=true"/>
 #<h1> 🧑🏻‍💻 Tech Stack: </h1>
 <p>
